@@ -6,3 +6,4 @@ enum gameState {
 }
 
 global.game = gameState.battle;
+//
