@@ -6,4 +6,5 @@ enum gameState {
 }
 
 global.game = gameState.battle;
+global.time = true;
 //
