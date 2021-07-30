@@ -4,13 +4,12 @@ function userInterface(){
 	draw_set_color(c_black);
 	draw_rectangle(0 ,room_height - 100, room_width, room_height, false);
 	
+	draw_set_color(c_white);
+	draw_set_halign(fa_right);
+	draw_set_font(fn_text);
+	
 	if (global.has2players) {
 		//2 Player UI Elements
-		
-		draw_set_color(c_white);
-		
-		array_set(panel[uiPanel.timeline],2,array_get(panel[uiPanel.itemslotsp2],0));
-		array_set(panel[uiPanel.healthbarp1],2,ui.right/2);
 		
 		//Healthbar - P2
 		//draw_rectangle_color(array_get(panel[uiPanel.healthbar],0),array_get(panel[uiPanel.healthbar],1),array_get(panel[uiPanel.healthbar],2),array_get(panel[uiPanel.healthbar],3),c_ltgray,c_ltgray,c_ltgray,c_ltgray,false);
@@ -24,23 +23,13 @@ function userInterface(){
 		
 		//Actions - P2
 		//draw_rectangle_color(array_get(panel[uiPanel.actionsp2],0),array_get(panel[uiPanel.actionsp2],1),array_get(panel[uiPanel.actionsp2],2),array_get(panel[uiPanel.actionsp2],3),c_green,c_green,c_green,c_green,false);
-		draw_set_halign(fa_right);
-		draw_set_font(fn_text);
 		draw_text(array_get(panel[uiPanel.actionsp2],2) - ui.border, array_get(panel[uiPanel.actionsp2],1) + 2, "Attack");
 		draw_text(array_get(panel[uiPanel.actionsp2],2) - ui.border, array_get(panel[uiPanel.actionsp2],1) + 18, "Items");
 		draw_text(array_get(panel[uiPanel.actionsp2],2) - ui.border, array_get(panel[uiPanel.actionsp2],1) + 34, "Exit");
 	
-	} else {
-		//1 Player UI Elements
-		
-		draw_set_color(c_white);
-		
-		array_set(panel[uiPanel.timeline],2,ui.right);
-		array_set(panel[uiPanel.healthbarp1],2,ui.right);
-		
 	}
 	
-	//Healthbar
+	//Healthbar - P1
 	//draw_rectangle_color(array_get(panel[uiPanel.healthbar],0),array_get(panel[uiPanel.healthbar],1),array_get(panel[uiPanel.healthbar],2),array_get(panel[uiPanel.healthbar],3),c_ltgray,c_ltgray,c_ltgray,c_ltgray,false);
 	draw_rectangle(array_get(panel[uiPanel.healthbarp1],0) + ui.border,array_get(panel[uiPanel.healthbarp1],1) + ui.border, array_get(panel[uiPanel.healthbarp1],2) - ui.border, array_get(panel[uiPanel.healthbarp1],3) - ui.border, false);
 	
@@ -57,12 +46,6 @@ function userInterface(){
 	draw_line(array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + ui.invSlotSize, array_get(panel[uiPanel.itemslotsp1], 1) + ui.border - 1, array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + ui.invSlotSize, array_get(panel[uiPanel.itemslotsp1], 3) - ui.border);
 	draw_line(array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + (ui.invSlotSize*2), array_get(panel[uiPanel.itemslotsp1], 1) + ui.border - 1, array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + (ui.invSlotSize*2), array_get(panel[uiPanel.itemslotsp1], 3) - ui.border);
 	
-	//Score - Center
-	draw_set_halign(fa_center);
-	draw_set_valign(fa_top);
-	draw_set_font(fn_score);
-	draw_text(ui.right/2,ui.top + 50, "Score : " + string(score));
-	
 	//Actions - P1
 	//draw_rectangle_color(array_get(panel[uiPanel.actions],0),array_get(panel[uiPanel.actions],1),array_get(panel[uiPanel.actions],2),array_get(panel[uiPanel.actions],3),c_green,c_green,c_green,c_green,false);
 	draw_set_halign(fa_left);
@@ -70,5 +53,11 @@ function userInterface(){
 	draw_text(array_get(panel[uiPanel.actionsp1],0) + ui.border, array_get(panel[uiPanel.actionsp1],1) + 2, "Attack");
 	draw_text(array_get(panel[uiPanel.actionsp1],0) + ui.border, array_get(panel[uiPanel.actionsp1],1) + 18, "Items");
 	draw_text(array_get(panel[uiPanel.actionsp1],0) + ui.border, array_get(panel[uiPanel.actionsp1],1) + 34, "Exit");
+	
+	//Score - Centered
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_top);
+	draw_set_font(fn_score);
+	draw_text(ui.right/2,ui.top + 50, "Score : " + string(score));
 	
 }
