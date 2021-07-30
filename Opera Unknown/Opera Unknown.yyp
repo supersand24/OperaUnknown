@@ -3,6 +3,7 @@
     {"id":{"name":"fn_score","path":"fonts/fn_score/fn_score.yy",},"order":1,},
     {"id":{"name":"controller","path":"objects/controller/controller.yy",},"order":0,},
     {"id":{"name":"userInterface","path":"scripts/userInterface/userInterface.yy",},"order":0,},
+    {"id":{"name":"fn_bar","path":"fonts/fn_bar/fn_bar.yy",},"order":2,},
     {"id":{"name":"togglePlayers","path":"scripts/togglePlayers/togglePlayers.yy",},"order":1,},
     {"id":{"name":"fn_text","path":"fonts/fn_text/fn_text.yy",},"order":0,},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"order":0,},
