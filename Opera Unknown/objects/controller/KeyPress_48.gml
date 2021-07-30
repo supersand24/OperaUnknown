@@ -1,0 +1,1 @@
+global.has2players = true;
