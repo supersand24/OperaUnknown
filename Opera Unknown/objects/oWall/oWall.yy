@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oEnemyParent",
-    "path": "objects/oEnemyParent/oEnemyParent.yy",
+    "name": "oEntity",
+    "path": "objects/oEntity/oEntity.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "enemies",
-    "path": "folders/Objects/Entities/units/enemies.yy",
+    "name": "walls",
+    "path": "folders/Objects/Entities/walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBeast",
+  "name": "oWall",
   "tags": [],
   "resourceType": "GMObject",
 }

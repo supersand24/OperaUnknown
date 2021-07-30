@@ -1,6 +1,5 @@
 /// @description Animte player
 // You can write your code in this editor
-
 if (state == states.walking) {
 	
 	walk_anim_time += delta_time / 1000000;

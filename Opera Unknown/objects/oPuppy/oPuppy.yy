@@ -25,7 +25,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "enemies",
-    "path": "folders/Objects/Entities/enemies.yy",
+    "path": "folders/Objects/Entities/units/enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "oPuppy",

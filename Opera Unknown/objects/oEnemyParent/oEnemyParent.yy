@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oEntityParent",
-    "path": "objects/oEntityParent/oEntityParent.yy",
+    "name": "oUnit",
+    "path": "objects/oUnit/oUnit.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "units",
+    "path": "folders/Objects/Entities/units.yy",
   },
   "resourceVersion": "1.0",
   "name": "oEnemyParent",

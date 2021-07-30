@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "sPlayerTest",
-    "path": "sprites/sPlayerTest/sPlayerTest.yy",
+    "name": "sPlayer",
+    "path": "sprites/sPlayer/sPlayer.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oEntityParent",
-    "path": "objects/oEntityParent/oEntityParent.yy",
+    "name": "oUnit",
+    "path": "objects/oUnit/oUnit.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,7 +24,6 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":39,"eventType":5,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":37,"eventType":5,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
@@ -33,11 +32,11 @@
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"max_hp","path":"objects/oEntityParent/oEntityParent.yy",},"objectId":{"name":"oEntityParent","path":"objects/oEntityParent/oEntityParent.yy",},"value":"20","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"max_hp","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"20","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "player",
-    "path": "folders/Objects/Entities/player.yy",
+    "path": "folders/Objects/Entities/units/player.yy",
   },
   "resourceVersion": "1.0",
   "name": "oPlayer",
