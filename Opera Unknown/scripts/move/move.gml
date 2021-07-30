@@ -1,7 +1,7 @@
 // @desc move player
 //@param directions
 function move() {
-	var dir = argument[0];
+	var dir = argument0;
 	var components = global.components[dir];
 	var dx = components[0];
 	var dy = components[1];

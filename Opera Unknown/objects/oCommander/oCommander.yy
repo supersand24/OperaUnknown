@@ -1,12 +1,12 @@
 {
   "spriteId": null,
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oEntityParent",
-    "path": "objects/oEntityParent/oEntityParent.yy",
+    "name": "oEnemyParent",
+    "path": "objects/oEnemyParent/oEnemyParent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "enemies",
+    "path": "folders/Objects/Entities/enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oEnemyParent",
+  "name": "oCommander",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -36,11 +36,11 @@
     {"propertyId":{"name":"max_hp","path":"objects/oEntityParent/oEntityParent.yy",},"objectId":{"name":"oEntityParent","path":"objects/oEntityParent/oEntityParent.yy",},"value":"20","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "player",
+    "path": "folders/Objects/Entities/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayerParent",
+  "name": "oPlayer",
   "tags": [],
   "resourceType": "GMObject",
 }

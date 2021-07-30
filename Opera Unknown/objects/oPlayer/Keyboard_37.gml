@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-//move(directions.left);
+move(directions.left);
