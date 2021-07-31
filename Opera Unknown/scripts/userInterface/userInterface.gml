@@ -65,23 +65,15 @@ function userInterface(){
 	draw_line(array_get(panel[uiPanel.timeline],0) + ui.border, timelineMiddle - 7, array_get(panel[uiPanel.timeline],0) + ui.border, timelineMiddle + 7);
 	
 	//Tempvars for testing
-	var ally;
-	ally[0] = 0.9;
-	ally[1] = 0.7;
-	ally[2] = 0.5;
-	var enemy;
-	enemy[0] = 0.3;
-	enemy[1] = 0.4;
-	enemy[2] = 0.5;
 	
 	//For each ally.
 	for (var i = 0; i < array_length(ally); i++) {
-		draw_circle(array_get(panel[uiPanel.timeline],0) + (timelineLength*ally[i]) + ui.border,timelineMiddle - 6,5,false);
+		draw_circle(array_get(panel[uiPanel.timeline],0) + (timelineLength*ally[i].timeline) + ui.border,timelineMiddle - 6,5,false);
 	}
 	
 	//For each enemy.
 	for (var i = 0; i < array_length(enemy); i++) {
-		draw_circle(array_get(panel[uiPanel.timeline],0) + (timelineLength*enemy[i]) + ui.border,timelineMiddle + 5,5,false);
+		draw_circle(array_get(panel[uiPanel.timeline],0) + (timelineLength*enemy[i].timeline) + ui.border,timelineMiddle + 5,5,false);
 	}
 	
 	//Inventory Slots - P1

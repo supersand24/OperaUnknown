@@ -3,7 +3,6 @@
     {"id":{"name":"oBerserker","path":"objects/oBerserker/oBerserker.yy",},"order":4,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":0,},
     {"id":{"name":"MACRO","path":"scripts/MACRO/MACRO.yy",},"order":1,},
-    {"id":{"name":"oTile","path":"objects/oTile/oTile.yy",},"order":4,},
     {"id":{"name":"oCommander","path":"objects/oCommander/oCommander.yy",},"order":5,},
     {"id":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},"order":3,},
     {"id":{"name":"genericObj","path":"objects/genericObj/genericObj.yy",},"order":6,},
