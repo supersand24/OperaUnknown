@@ -6,8 +6,6 @@ function move() {
 	var dx = components[0];
 	var dy = components[1];
 
-	
-
 	if (state == states.idle) {
 		if ((place_empty(x+(dx * tile_width), y+(dy * tile_height)) && ((x+(dx * tile_width)) <= rm_size-10 && (x+(dx * tile_width) > 10)) &&  ((y+(dy * tile_width) <= rm_size-10) && (y+(dy * tile_width) > 10)))) {
 			x_from = x_pos;
@@ -21,6 +19,9 @@ function move() {
 			y_pos = y_to;
 	
 			state = states.walking;
+			
+			time = 1;
+			global.timeMoving = true;
 			
 			//show_debug_message("im walking");
 		

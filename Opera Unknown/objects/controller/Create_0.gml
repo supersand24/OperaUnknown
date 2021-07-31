@@ -7,6 +7,7 @@ enum gameState {
 
 global.game = gameState.battle;
 global.has2players = false;
+global.timeMoving = true;
 
 enum ui {
 	left = 0,
@@ -36,4 +37,8 @@ enemy = undefined;
 
 ally[0] = instance_create_layer(2*tile_width,2*tile_height,"Allies",oPlayer);
 
-ally[0].timeline = 0.2;
+ally[0].time = 1;
+
+enemy[0] = instance_create_layer(10*tile_width,8*tile_height,"Enemies",oPlayer);
+
+enemy[0].time = 0.7;

@@ -59,21 +59,19 @@ function userInterface(){
 	//Timeline - Scales to Player Count
 	//Add to array?
 	var timelineMiddle = ui.top + ( (array_get(panel[uiPanel.timeline],3) - array_get(panel[uiPanel.timeline], 1))/2 );
-	var timelineLength = array_get(panel[uiPanel.timeline],2) - array_get(panel[uiPanel.timeline],0);
+	var timelineLength = (array_get(panel[uiPanel.timeline],2) - ui.border*2 - 4) - (array_get(panel[uiPanel.timeline],0) + ui.border*2);
 	//draw_rectangle_color(array_get(panel[uiPanel.timeline],0),array_get(panel[uiPanel.timeline],1),array_get(panel[uiPanel.timeline],2),array_get(panel[uiPanel.timeline],3),c_blue,c_blue,c_blue,c_blue,false);
 	draw_line(array_get(panel[uiPanel.timeline],0) + ui.border, timelineMiddle, array_get(panel[uiPanel.timeline],2) - ui.border - 5, timelineMiddle);
 	draw_line(array_get(panel[uiPanel.timeline],0) + ui.border, timelineMiddle - 7, array_get(panel[uiPanel.timeline],0) + ui.border, timelineMiddle + 7);
 	
-	//Tempvars for testing
-	
 	//For each ally.
 	for (var i = 0; i < array_length(ally); i++) {
-		draw_circle(array_get(panel[uiPanel.timeline],0) + (timelineLength*ally[i].timeline) + ui.border,timelineMiddle - 6,5,false);
+		draw_sprite(sMini,0,array_get(panel[uiPanel.timeline],0) + (timelineLength*ally[i].time) + ui.border,timelineMiddle);
 	}
 	
 	//For each enemy.
 	for (var i = 0; i < array_length(enemy); i++) {
-		draw_circle(array_get(panel[uiPanel.timeline],0) + (timelineLength*enemy[i].timeline) + ui.border,timelineMiddle + 5,5,false);
+		draw_sprite(sMiniGrunt,0,array_get(panel[uiPanel.timeline],0) + (timelineLength*enemy[i].time) + ui.border,timelineMiddle);
 	}
 	
 	//Inventory Slots - P1
