@@ -29,6 +29,9 @@ function userInterface(){
 		draw_rectangle(array_get(panel[uiPanel.itemslotsp2], 0) + ui.border, array_get(panel[uiPanel.itemslotsp2], 1) + ui.border, array_get(panel[uiPanel.itemslotsp2], 2) - ui.border, array_get(panel[uiPanel.itemslotsp2], 3) - ui.border, true);
 		draw_line(array_get(panel[uiPanel.itemslotsp2], 0) + ui.border + ui.invSlotSize, array_get(panel[uiPanel.itemslotsp2], 1) + ui.border - 1, array_get(panel[uiPanel.itemslotsp2], 0) + ui.border + ui.invSlotSize, array_get(panel[uiPanel.itemslotsp2], 3) - ui.border);
 		draw_line(array_get(panel[uiPanel.itemslotsp2], 0) + ui.border + (ui.invSlotSize*2), array_get(panel[uiPanel.itemslotsp2], 1) + ui.border - 1, array_get(panel[uiPanel.itemslotsp2], 0) + ui.border + (ui.invSlotSize*2), array_get(panel[uiPanel.itemslotsp2], 3) - ui.border);
+		draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp2],0) + ui.border,array_get(panel[uiPanel.itemslotsp2],1) + ui.border);
+		draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp2],0) + (ui.invSlotSize) + ui.border,array_get(panel[uiPanel.itemslotsp2],1) + ui.border);
+		draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp2],0) + (ui.invSlotSize*2) + ui.border,array_get(panel[uiPanel.itemslotsp2],1) + ui.border);
 		
 		//Actions - P2
 		draw_set_valign(fa_top);
@@ -86,6 +89,9 @@ function userInterface(){
 	draw_rectangle(array_get(panel[uiPanel.itemslotsp1], 0) + ui.border, array_get(panel[uiPanel.itemslotsp1], 1) + ui.border, array_get(panel[uiPanel.itemslotsp1], 2) - ui.border, array_get(panel[uiPanel.itemslotsp1], 3) - ui.border, true);
 	draw_line(array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + ui.invSlotSize, array_get(panel[uiPanel.itemslotsp1], 1) + ui.border - 1, array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + ui.invSlotSize, array_get(panel[uiPanel.itemslotsp1], 3) - ui.border);
 	draw_line(array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + (ui.invSlotSize*2), array_get(panel[uiPanel.itemslotsp1], 1) + ui.border - 1, array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + (ui.invSlotSize*2), array_get(panel[uiPanel.itemslotsp1], 3) - ui.border);
+	draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp1],0) + ui.border,array_get(panel[uiPanel.itemslotsp1],1) + ui.border);
+	draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp1],0) + (ui.invSlotSize) + ui.border,array_get(panel[uiPanel.itemslotsp1],1) + ui.border);
+	draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp1],0) + (ui.invSlotSize*2) + ui.border,array_get(panel[uiPanel.itemslotsp1],1) + ui.border);
 	
 	//Actions - P1
 	//draw_rectangle_color(array_get(panel[uiPanel.actions],0),array_get(panel[uiPanel.actions],1),array_get(panel[uiPanel.actions],2),array_get(panel[uiPanel.actions],3),c_green,c_green,c_green,c_green,false);
