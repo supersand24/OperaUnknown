@@ -8,7 +8,7 @@ function move() {
 
 	if (myTurn) {
 		if (state == states.idle) {
-			if ((place_empty(x+(dx * tile_width), y+(dy * tile_size)) && ((x+(dx * tile_size)) <= rm_size-10 && (x+(dx * tile_size) > 10)) &&  ((y+(dy * tile_width) <= rm_size-10) && (y+(dy * tile_size) > 10)))) {
+			if ((place_empty(x+(dx * tile_size), y+(dy * tile_size)) && ((x+(dx * tile_size)) <= rm_size-10 && (x+(dx * tile_size) > 10)) &&  ((y+(dy * tile_size) <= rm_size-10) && (y+(dy * tile_size) > 10)))) {
 				x_from = x_pos;
 				y_from = y_pos;
 	
