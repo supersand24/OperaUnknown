@@ -1,9 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function userInterface(){
+	
 	draw_set_color(c_black);
 	draw_rectangle(ui.left ,ui.top, ui.right, ui.bottom, false);
-	
 	draw_set_color(c_white);
 	
 	if (global.has2players) {
@@ -69,7 +69,7 @@ function userInterface(){
 	
 	//For each enemy.
 	for (var i = 0; i < array_length(enemy); i++) {
-		draw_sprite(sMiniGrunt,0,array_get(panel[uiPanel.timeline],0) + (timelineLength*enemy[i].time) + ui.border,timelineMiddle);
+		draw_sprite(sMiniGrunt,0,array_get(panel[uiPanel.timeline],0) + (timelineLength*enemy[i].time) + ui.border,timelineMiddle + 1);
 	}
 	
 	//Inventory Slots - P1
@@ -96,4 +96,29 @@ function userInterface(){
 	draw_set_font(fn_score);
 	draw_text(ui.right/2,ui.top + 50, "Score : " + string(score));
 	
+	
+	side();
+}
+
+function side() {
+	draw_rectangle_color(uiSide.left ,uiSide.top, uiSide.right, uiSide.bottom, c_gray, c_gray, c_gray, c_gray, false);
+	if (array_length(ally) > 2) {
+		if (global.has2players) {
+			for (var i = 2; i < array_length(ally); i++) {
+				var healthbarLength = (uiSide.right - uiSide.border) - (uiSide.left + uiSide.border);
+				var healthbarPercent = healthbarLength * (ally[i].hp / ally[i].max_hp);
+				draw_sprite(sMini,0,uiSide.left + 15,uiSide.top + 22 + ((i-2)*30));
+				draw_rectangle(uiSide.left + uiSide.border,uiSide.top + 25 + ((i-2)*30), uiSide.right - uiSide.border, uiSide.top + 20 + ((i-2)*30), false);
+				draw_rectangle_color(uiSide.left + uiSide.border,uiSide.top + 25 + ((i-2)*30), uiSide.left + uiSide.border + healthbarPercent, uiSide.top + 20 + ((i-2)*30), c_lime, c_lime, c_lime, c_lime, false);
+			}
+		} else {
+			for (var i = 1; i < array_length(ally); i++) {
+				var healthbarLength = (uiSide.right - uiSide.border) - (uiSide.left + uiSide.border);
+				var healthbarPercent = healthbarLength * (ally[i].hp / ally[i].max_hp);
+				draw_sprite(sMini,0,uiSide.left + 15,uiSide.top + 15 + ((i-1)*25));
+				draw_rectangle(uiSide.left + uiSide.border,uiSide.top + 18 + ((i-1)*25), uiSide.right - uiSide.border, uiSide.top + 20 + ((i-1)*25), false);
+				draw_rectangle_color(uiSide.left + uiSide.border,uiSide.top + 18 + ((i-1)*25), uiSide.left + uiSide.border + healthbarPercent, uiSide.top + 20 + ((i-1)*25), c_lime, c_lime, c_lime, c_lime, false);
+			}
+		}
+	}
 }
