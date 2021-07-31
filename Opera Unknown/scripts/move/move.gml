@@ -9,7 +9,7 @@ function move() {
 	
 
 	if (state == states.idle) {
-		if (place_empty(x+(dx * tile_width), y+(dy * tile_height))) {
+		if ((place_empty(x+(dx * tile_width), y+(dy * tile_height)) && ((x+(dx * tile_width)) <= rm_size-10 && (x+(dx * tile_width) > 10)) &&  ((y+(dy * tile_width) <= rm_size-10) && (y+(dy * tile_width) > 10)))) {
 			x_from = x_pos;
 			y_from = y_pos;
 	

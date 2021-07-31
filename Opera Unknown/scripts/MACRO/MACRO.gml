@@ -5,6 +5,8 @@ gml_pragma("global", "MACRO()");
 #macro tile_width 20
 #macro tile_height 20
 
+#macro rm_size 600
+
 enum directions {
 	right,
 	up,
