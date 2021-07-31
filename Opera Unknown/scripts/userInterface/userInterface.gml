@@ -2,11 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function userInterface(){
 	draw_set_color(c_black);
-	draw_rectangle(0 ,room_height - 100, room_width, room_height, false);
+	draw_rectangle(ui.left ,ui.top, ui.right, ui.bottom, false);
 	
 	draw_set_color(c_white);
-	//draw_set_halign(fa_right);
-	//draw_set_font(fn_text);
 	
 	if (global.has2players) {
 		//2 Player UI Elements
@@ -16,22 +14,22 @@ function userInterface(){
 		//Healthbar - P2
 		//Add to array?
 		var healthbarLength = array_get(panel[uiPanel.healthbarp2],2) - array_get(panel[uiPanel.healthbarp2],0);
-		var healthbarPercent = healthbarLength * 1;
+		var healthbarPercent = healthbarLength * (ally[p2].hp / ally[p2].max_hp);
 		//draw_rectangle_color(array_get(panel[uiPanel.healthbar],0),array_get(panel[uiPanel.healthbar],1),array_get(panel[uiPanel.healthbar],2),array_get(panel[uiPanel.healthbar],3),c_ltgray,c_ltgray,c_ltgray,c_ltgray,false);
 		draw_rectangle(array_get(panel[uiPanel.healthbarp2],0) + ui.border,array_get(panel[uiPanel.healthbarp2],1) + ui.border, array_get(panel[uiPanel.healthbarp2],2) - ui.border, array_get(panel[uiPanel.healthbarp2],3) - ui.border, false);
 		draw_rectangle_color(array_get(panel[uiPanel.healthbarp2],2) - healthbarPercent + ui.border + 1,array_get(panel[uiPanel.healthbarp2],1) + ui.border + 1, array_get(panel[uiPanel.healthbarp2],2) - ui.border - 1, array_get(panel[uiPanel.healthbarp2],3) - ui.border - 1, c_blue, c_blue, c_blue, c_blue, false);
 		draw_set_valign(fa_middle);
 		draw_set_font(fn_bar);
-		draw_text(array_get(panel[uiPanel.healthbarp2],2) - ui.border, array_get(panel[uiPanel.healthbarp1],1), "70/70 HP");
+		draw_text(array_get(panel[uiPanel.healthbarp2],2) - ui.border, array_get(panel[uiPanel.healthbarp1],1), string(ally[p2].hp) + "/" + string(ally[p2].hp) + " HP");
 		
 		//Inventory Slots - P2
 		//draw_rectangle_color(array_get(panel[uiPanel.itemslotsp2],0),array_get(panel[uiPanel.itemslotsp2],1),array_get(panel[uiPanel.itemslotsp2],2),array_get(panel[uiPanel.itemslotsp2],3),c_red,c_red,c_red,c_red,false);
 		draw_rectangle(array_get(panel[uiPanel.itemslotsp2], 0) + ui.border, array_get(panel[uiPanel.itemslotsp2], 1) + ui.border, array_get(panel[uiPanel.itemslotsp2], 2) - ui.border, array_get(panel[uiPanel.itemslotsp2], 3) - ui.border, true);
 		draw_line(array_get(panel[uiPanel.itemslotsp2], 0) + ui.border + ui.invSlotSize, array_get(panel[uiPanel.itemslotsp2], 1) + ui.border - 1, array_get(panel[uiPanel.itemslotsp2], 0) + ui.border + ui.invSlotSize, array_get(panel[uiPanel.itemslotsp2], 3) - ui.border);
 		draw_line(array_get(panel[uiPanel.itemslotsp2], 0) + ui.border + (ui.invSlotSize*2), array_get(panel[uiPanel.itemslotsp2], 1) + ui.border - 1, array_get(panel[uiPanel.itemslotsp2], 0) + ui.border + (ui.invSlotSize*2), array_get(panel[uiPanel.itemslotsp2], 3) - ui.border);
-		draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp2],0) + ui.border,array_get(panel[uiPanel.itemslotsp2],1) + ui.border);
-		draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp2],0) + (ui.invSlotSize) + ui.border,array_get(panel[uiPanel.itemslotsp2],1) + ui.border);
-		draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp2],0) + (ui.invSlotSize*2) + ui.border,array_get(panel[uiPanel.itemslotsp2],1) + ui.border);
+		draw_sprite(sItem,array_get(ally[p2].item,0),array_get(panel[uiPanel.itemslotsp2],0) + ui.border,array_get(panel[uiPanel.itemslotsp2],1) + ui.border);
+		draw_sprite(sItem,array_get(ally[p2].item,0),array_get(panel[uiPanel.itemslotsp2],0) + (ui.invSlotSize) + ui.border,array_get(panel[uiPanel.itemslotsp2],1) + ui.border);
+		draw_sprite(sItem,array_get(ally[p2].item,0),array_get(panel[uiPanel.itemslotsp2],0) + (ui.invSlotSize*2) + ui.border,array_get(panel[uiPanel.itemslotsp2],1) + ui.border);
 		
 		//Actions - P2
 		draw_set_valign(fa_top);
@@ -46,7 +44,7 @@ function userInterface(){
 	//Healthbar - P1
 	//Add to array?
 	var healthbarLength = array_get(panel[uiPanel.healthbarp1],2) - array_get(panel[uiPanel.healthbarp1],0);
-	var healthbarPercent = healthbarLength * 0.8;
+	var healthbarPercent = healthbarLength * (ally[0].hp / ally[0].max_hp);
 	//show_debug_message(array_get(panel[uiPanel.healthbarp1],0) + percent - ui.border*2)
 	//draw_rectangle_color(array_get(panel[uiPanel.healthbar],0),array_get(panel[uiPanel.healthbar],1),array_get(panel[uiPanel.healthbar],2),array_get(panel[uiPanel.healthbar],3),c_ltgray,c_ltgray,c_ltgray,c_ltgray,false);
 	draw_rectangle(array_get(panel[uiPanel.healthbarp1],0) + ui.border,array_get(panel[uiPanel.healthbarp1],1) + ui.border, array_get(panel[uiPanel.healthbarp1],2) - ui.border, array_get(panel[uiPanel.healthbarp1],3) - ui.border, false);
@@ -54,7 +52,7 @@ function userInterface(){
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_middle);
 	draw_set_font(fn_bar);
-	draw_text(array_get(panel[uiPanel.healthbarp1],0) + ui.border, array_get(panel[uiPanel.healthbarp1],1), "40/50 HP");
+	draw_text(array_get(panel[uiPanel.healthbarp1],0) + ui.border, array_get(panel[uiPanel.healthbarp1],1), string(ally[p1].hp) + "/" + string(ally[p1].hp) + " HP");
 	
 	//Timeline - Scales to Player Count
 	//Add to array?
@@ -79,9 +77,9 @@ function userInterface(){
 	draw_rectangle(array_get(panel[uiPanel.itemslotsp1], 0) + ui.border, array_get(panel[uiPanel.itemslotsp1], 1) + ui.border, array_get(panel[uiPanel.itemslotsp1], 2) - ui.border, array_get(panel[uiPanel.itemslotsp1], 3) - ui.border, true);
 	draw_line(array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + ui.invSlotSize, array_get(panel[uiPanel.itemslotsp1], 1) + ui.border - 1, array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + ui.invSlotSize, array_get(panel[uiPanel.itemslotsp1], 3) - ui.border);
 	draw_line(array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + (ui.invSlotSize*2), array_get(panel[uiPanel.itemslotsp1], 1) + ui.border - 1, array_get(panel[uiPanel.itemslotsp1], 0) + ui.border + (ui.invSlotSize*2), array_get(panel[uiPanel.itemslotsp1], 3) - ui.border);
-	draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp1],0) + ui.border,array_get(panel[uiPanel.itemslotsp1],1) + ui.border);
-	draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp1],0) + (ui.invSlotSize) + ui.border,array_get(panel[uiPanel.itemslotsp1],1) + ui.border);
-	draw_sprite(sItem,0,array_get(panel[uiPanel.itemslotsp1],0) + (ui.invSlotSize*2) + ui.border,array_get(panel[uiPanel.itemslotsp1],1) + ui.border);
+	draw_sprite(sItem,array_get(ally[p1].item,0),array_get(panel[uiPanel.itemslotsp1],0) + ui.border,array_get(panel[uiPanel.itemslotsp1],1) + ui.border);
+	draw_sprite(sItem,array_get(ally[p1].item,0),array_get(panel[uiPanel.itemslotsp1],0) + (ui.invSlotSize) + ui.border,array_get(panel[uiPanel.itemslotsp1],1) + ui.border);
+	draw_sprite(sItem,array_get(ally[p1].item,0),array_get(panel[uiPanel.itemslotsp1],0) + (ui.invSlotSize*2) + ui.border,array_get(panel[uiPanel.itemslotsp1],1) + ui.border);
 	
 	//Actions - P1
 	//draw_rectangle_color(array_get(panel[uiPanel.actions],0),array_get(panel[uiPanel.actions],1),array_get(panel[uiPanel.actions],2),array_get(panel[uiPanel.actions],3),c_green,c_green,c_green,c_green,false);
