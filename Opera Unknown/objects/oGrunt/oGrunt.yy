@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sGrunt",
+    "path": "sprites/sGrunt/sGrunt.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

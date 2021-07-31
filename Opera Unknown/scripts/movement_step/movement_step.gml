@@ -22,4 +22,4 @@ if (state == states.walking) {
 	y = _y * tile_size;
 }
 
-}
+timeline();
