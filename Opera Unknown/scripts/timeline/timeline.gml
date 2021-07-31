@@ -7,6 +7,7 @@ function timeline(){
 		
 		if (time <= 0) {
 			global.timeMoving = false;
+			myTurn = true;
 			time = 0;
 		}
 		
