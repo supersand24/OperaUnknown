@@ -19,6 +19,7 @@
     {"id":{"name":"oSoldier","path":"objects/oSoldier/oSoldier.yy",},"order":3,},
     {"id":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"order":2,},
     {"id":{"name":"oBeast","path":"objects/oBeast/oBeast.yy",},"order":7,},
+    {"id":{"name":"movement_step","path":"scripts/movement_step/movement_step.yy",},"order":3,},
     {"id":{"name":"controller","path":"objects/controller/controller.yy",},"order":0,},
     {"id":{"name":"oGrunt","path":"objects/oGrunt/oGrunt.yy",},"order":2,},
     {"id":{"name":"fn_score","path":"fonts/fn_score/fn_score.yy",},"order":1,},

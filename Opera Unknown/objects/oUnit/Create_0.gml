@@ -5,8 +5,8 @@ enum states {
 }
 state = states.idle;
 
-x_pos = x div tile_width;
-y_pos = y div tile_height;
+x_pos = x div tile_size;
+y_pos = y div tile_size;
 
 x_from = x_pos;
 y_from = y_pos;

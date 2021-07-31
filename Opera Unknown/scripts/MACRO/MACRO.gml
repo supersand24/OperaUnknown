@@ -2,8 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 gml_pragma("global", "MACRO()");
 
-#macro tile_width 20
-#macro tile_height 20
+#macro tile_size 20
+
 
 #macro rm_size 600
 
