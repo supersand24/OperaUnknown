@@ -14,11 +14,12 @@ function userInterface(){
 		draw_set_halign(fa_right);
 		
 		//Healthbar - P2
-		var diff = array_get(panel[uiPanel.healthbarp2],2) - array_get(panel[uiPanel.healthbarp2],0);
-		var percent = diff * 1;
+		//Add to array?
+		var healthbarLength = array_get(panel[uiPanel.healthbarp2],2) - array_get(panel[uiPanel.healthbarp2],0);
+		var healthbarPercent = healthbarLength * 1;
 		//draw_rectangle_color(array_get(panel[uiPanel.healthbar],0),array_get(panel[uiPanel.healthbar],1),array_get(panel[uiPanel.healthbar],2),array_get(panel[uiPanel.healthbar],3),c_ltgray,c_ltgray,c_ltgray,c_ltgray,false);
 		draw_rectangle(array_get(panel[uiPanel.healthbarp2],0) + ui.border,array_get(panel[uiPanel.healthbarp2],1) + ui.border, array_get(panel[uiPanel.healthbarp2],2) - ui.border, array_get(panel[uiPanel.healthbarp2],3) - ui.border, false);
-		draw_rectangle_color(array_get(panel[uiPanel.healthbarp2],2) - percent + ui.border + 1,array_get(panel[uiPanel.healthbarp2],1) + ui.border + 1, array_get(panel[uiPanel.healthbarp2],2) - ui.border - 1, array_get(panel[uiPanel.healthbarp2],3) - ui.border - 1, c_blue, c_blue, c_blue, c_blue, false);
+		draw_rectangle_color(array_get(panel[uiPanel.healthbarp2],2) - healthbarPercent + ui.border + 1,array_get(panel[uiPanel.healthbarp2],1) + ui.border + 1, array_get(panel[uiPanel.healthbarp2],2) - ui.border - 1, array_get(panel[uiPanel.healthbarp2],3) - ui.border - 1, c_blue, c_blue, c_blue, c_blue, false);
 		draw_set_valign(fa_middle);
 		draw_set_font(fn_bar);
 		draw_text(array_get(panel[uiPanel.healthbarp2],2) - ui.border, array_get(panel[uiPanel.healthbarp1],1), "70/70 HP");
@@ -40,22 +41,45 @@ function userInterface(){
 	}
 	
 	//Healthbar - P1
-	var diff = array_get(panel[uiPanel.healthbarp1],2) - array_get(panel[uiPanel.healthbarp1],0);
-	var percent = diff * 0.8;
+	//Add to array?
+	var healthbarLength = array_get(panel[uiPanel.healthbarp1],2) - array_get(panel[uiPanel.healthbarp1],0);
+	var healthbarPercent = healthbarLength * 0.8;
 	//show_debug_message(array_get(panel[uiPanel.healthbarp1],0) + percent - ui.border*2)
 	//draw_rectangle_color(array_get(panel[uiPanel.healthbar],0),array_get(panel[uiPanel.healthbar],1),array_get(panel[uiPanel.healthbar],2),array_get(panel[uiPanel.healthbar],3),c_ltgray,c_ltgray,c_ltgray,c_ltgray,false);
 	draw_rectangle(array_get(panel[uiPanel.healthbarp1],0) + ui.border,array_get(panel[uiPanel.healthbarp1],1) + ui.border, array_get(panel[uiPanel.healthbarp1],2) - ui.border, array_get(panel[uiPanel.healthbarp1],3) - ui.border, false);
-	draw_rectangle_color(array_get(panel[uiPanel.healthbarp1],0) + ui.border + 1,array_get(panel[uiPanel.healthbarp1],1) + ui.border + 1, array_get(panel[uiPanel.healthbarp1],0) + percent - ui.border - 1, array_get(panel[uiPanel.healthbarp1],3) - ui.border - 1, c_red, c_red, c_red, c_red, false);
+	draw_rectangle_color(array_get(panel[uiPanel.healthbarp1],0) + ui.border + 1,array_get(panel[uiPanel.healthbarp1],1) + ui.border + 1, array_get(panel[uiPanel.healthbarp1],0) + healthbarPercent - ui.border - 1, array_get(panel[uiPanel.healthbarp1],3) - ui.border - 1, c_red, c_red, c_red, c_red, false);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_middle);
 	draw_set_font(fn_bar);
 	draw_text(array_get(panel[uiPanel.healthbarp1],0) + ui.border, array_get(panel[uiPanel.healthbarp1],1), "40/50 HP");
 	
 	//Timeline - Scales to Player Count
-	var middle = ui.top + ( (array_get(panel[uiPanel.timeline],3) - array_get(panel[uiPanel.timeline], 1))/2 );
+	//Add to array?
+	var timelineMiddle = ui.top + ( (array_get(panel[uiPanel.timeline],3) - array_get(panel[uiPanel.timeline], 1))/2 );
+	var timelineLength = array_get(panel[uiPanel.timeline],2) - array_get(panel[uiPanel.timeline],0);
 	//draw_rectangle_color(array_get(panel[uiPanel.timeline],0),array_get(panel[uiPanel.timeline],1),array_get(panel[uiPanel.timeline],2),array_get(panel[uiPanel.timeline],3),c_blue,c_blue,c_blue,c_blue,false);
-	draw_line(array_get(panel[uiPanel.timeline],0) + ui.border, middle, array_get(panel[uiPanel.timeline],2) - ui.border - 5, middle);
-	draw_line(array_get(panel[uiPanel.timeline],0) + ui.border, middle - 7, array_get(panel[uiPanel.timeline],0) + ui.border, middle + 7);
+	draw_line(array_get(panel[uiPanel.timeline],0) + ui.border, timelineMiddle, array_get(panel[uiPanel.timeline],2) - ui.border - 5, timelineMiddle);
+	draw_line(array_get(panel[uiPanel.timeline],0) + ui.border, timelineMiddle - 7, array_get(panel[uiPanel.timeline],0) + ui.border, timelineMiddle + 7);
+	
+	//Tempvars for testing
+	var ally;
+	ally[0] = 0.9;
+	ally[1] = 0.7;
+	ally[2] = 0.5;
+	var enemy;
+	enemy[0] = 0.3;
+	enemy[1] = 0.4;
+	enemy[2] = 0.5;
+	
+	//For each ally.
+	for (var i = 0; i < array_length(ally); i++) {
+		draw_circle(array_get(panel[uiPanel.timeline],0) + (timelineLength*ally[i]) + ui.border,timelineMiddle - 6,5,false);
+	}
+	
+	//For each enemy.
+	for (var i = 0; i < array_length(enemy); i++) {
+		draw_circle(array_get(panel[uiPanel.timeline],0) + (timelineLength*enemy[i]) + ui.border,timelineMiddle + 5,5,false);
+	}
 	
 	//Inventory Slots - P1
 	//draw_rectangle_color(array_get(panel[uiPanel.itemslots],0),array_get(panel[uiPanel.itemslots],1),array_get(panel[uiPanel.itemslots],2),array_get(panel[uiPanel.itemslots],3),c_red,c_red,c_red,c_red,false);
