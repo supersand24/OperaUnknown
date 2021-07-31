@@ -21,9 +21,7 @@ function move() {
 	
 				state = states.walking;
 			
-				time = 1;
-				global.timeMoving = true;
-				myTurn = false;
+				useTurn();
 			
 				//show_debug_message("im walking");
 		
