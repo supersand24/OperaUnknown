@@ -21,6 +21,13 @@
     {"id":{"name":"oBeast","path":"objects/oBeast/oBeast.yy",},"order":7,},
     {"id":{"name":"controller","path":"objects/controller/controller.yy",},"order":0,},
     {"id":{"name":"oGrunt","path":"objects/oGrunt/oGrunt.yy",},"order":2,},
+    {"id":{"name":"fn_score","path":"fonts/fn_score/fn_score.yy",},"order":1,},
+    {"id":{"name":"userInterface","path":"scripts/userInterface/userInterface.yy",},"order":0,},
+    {"id":{"name":"sItem","path":"sprites/sItem/sItem.yy",},"order":0,},
+    {"id":{"name":"fn_bar","path":"fonts/fn_bar/fn_bar.yy",},"order":2,},
+    {"id":{"name":"togglePlayers","path":"scripts/togglePlayers/togglePlayers.yy",},"order":1,},
+    {"id":{"name":"fn_text","path":"fonts/fn_text/fn_text.yy",},"order":0,},
+    {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"order":0,},
     {"id":{"name":"game","path":"rooms/game/game.yy",},"order":0,},
   ],
   "Options": [
@@ -60,6 +67,7 @@
     {"folderPath":"folders/Objects/Entities/units/enemies.yy","order":0,"resourceVersion":"1.0","name":"enemies","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Entities/walls.yy","order":4,"resourceVersion":"1.0","name":"walls","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Entities/units.yy","order":6,"resourceVersion":"1.0","name":"units","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/UserInterface.yy","order":1,"resourceVersion":"1.0","name":"UserInterface","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
