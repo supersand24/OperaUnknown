@@ -3,6 +3,8 @@
 function movement_step(){
 
 // You can write your code in this editor
+
+//intializes states and variables for movement
 if (state == states.walking) {
 	
 	walk_anim_time += delta_time / 1000000;
