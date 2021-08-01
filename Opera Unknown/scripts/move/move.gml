@@ -12,16 +12,9 @@ function move() {
 				x_from = x_pos;
 				y_from = y_pos;
 	
-
-	if (state == states.idle) {
-		if ((!place_meeting(x+(dx * tile_size), y+(dy * tile_size), oEntity) && ((x+(dx * tile_size)) <= rm_size-10 && (x+(dx * tile_size) > 10)) &&  ((y+(dy * tile_size) <= rm_size-10) && (y+(dy * tile_size) > 10)))) {
-			x_from = x_pos;
-			y_from = y_pos;
-	
-			x_to = x_pos + dx;
-			y_to = y_pos + dy;
+				x_to = x_pos + dx;
+				y_to = y_pos + dy;
 		
-	
 				x_pos = x_to;
 				y_pos = y_to;
 	
