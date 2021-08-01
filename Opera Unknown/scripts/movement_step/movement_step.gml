@@ -6,7 +6,7 @@ function movement_step(){
 // You can write your code in this editor
 
 //intializes states and variables for movement
-if (state == states.walking) {
+if (state == unitStates.walking) {
 
 	
 		walk_anim_time += delta_time / 1000000;
@@ -16,7 +16,7 @@ if (state == states.walking) {
 		if (t >= 1) {
 			walk_anim_time = 0;
 			t = 1;
-			state = states.idle;
+			state = unitStates.idle;
 		}
 	
 		var _x = lerp(x_from, x_to, t);

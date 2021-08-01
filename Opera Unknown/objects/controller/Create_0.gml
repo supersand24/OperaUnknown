@@ -30,6 +30,10 @@ enum uiPanel {
 	healthbarp1, healthbarp2, itemslotsp1, itemslotsp2, timeline, actionsp1, actionsp2
 }
 
+enum unitStates {
+	idle, walking
+}
+
 //							  [	Left,									Top,									Right,								Bottom									];
 panel[uiPanel.healthbarp1]	= [	ui.left,								ui.top + 80,							ui.right,							ui.bottom								];
 panel[uiPanel.healthbarp2]	= [	ui.right/2,								ui.top + 80,							ui.right,							ui.bottom								];

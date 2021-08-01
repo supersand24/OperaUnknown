@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "movement",
-    "path": "folders/Scripts/movement.yy",
+    "name": "shooting",
+    "path": "folders/Scripts/shooting.yy",
   },
   "resourceVersion": "1.0",
-  "name": "move",
+  "name": "target",
   "tags": [],
   "resourceType": "GMScript",
 }

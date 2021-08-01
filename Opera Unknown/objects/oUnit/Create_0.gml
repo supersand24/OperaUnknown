@@ -2,11 +2,7 @@
 // You can write your code in this editor
 
 // sets states for movement
-enum states {
-	idle, walking
-}
-
-state = states.idle;
+state = unitStates.idle;
 
 x_pos = x div tile_size;
 y_pos = y div tile_size;
