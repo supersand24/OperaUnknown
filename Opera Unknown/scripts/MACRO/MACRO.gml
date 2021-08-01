@@ -5,6 +5,9 @@ gml_pragma("global", "MACRO()");
 //size of the tile
 #macro tile_size 30
 
+//half of tile
+#macro tile_half tile_size/2
+
 //size of the room for checking out of bounds
 #macro rm_size 600
 
