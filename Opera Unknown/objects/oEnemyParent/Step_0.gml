@@ -1,9 +1,11 @@
 /// @description uhhh
 
 // Inherit the parent event
-event_inherited();
+is_alive();
 
 if (myTurn) {
 	//skip turn for now
 	useTurn();
 }
+
+timeline();

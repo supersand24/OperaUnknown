@@ -6,5 +6,6 @@ is_alive();
 //intializes movement for every step
 movement_step();
 
+
 //ticks down the time
 timeline();

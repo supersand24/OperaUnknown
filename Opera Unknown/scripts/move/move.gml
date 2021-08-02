@@ -6,7 +6,7 @@ function move() {
 	var dx = components[0];
 	var dy = components[1];
 
-	if (myTurn) {
+	//if (myTurn) {
 		if (state == unitStates.idle) {
 			if ((!place_meeting(x+(dx * tile_size), y+(dy * tile_size), oEntity) && ((x+(dx * tile_size)) < rm_size && (x+(dx * tile_size) >= 0)) &&  ((y+(dy * tile_size) < rm_size) && (y+(dy * tile_size) >= 0)))) {
 				x_from = x_pos;
@@ -20,13 +20,13 @@ function move() {
 	
 				state = unitStates.walking;
 			
-				//useTurn();
+				
 			
 				//show_debug_message("im walking");
 		
-			} else {
+			//} else {
 			//show_debug_message("theres an object in my way");
-			}
+			//}
 		
 		}
 	}

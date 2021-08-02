@@ -4,6 +4,9 @@
 //draws a cirlce of the units range
 draw_self();
 
-if keyboard_check(ord("T")) {
-	target();
+if (myTurn) {
+	if keyboard_check(ord("T")) {
+		target();
+	}
+	//moveMe = false;
 }

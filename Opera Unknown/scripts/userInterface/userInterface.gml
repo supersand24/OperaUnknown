@@ -64,7 +64,10 @@ function userInterface(){
 	
 	//For each ally.
 	for (var i = 0; i < array_length(ally); i++) {
-		draw_sprite(sMini,0,array_get(panel[uiPanel.timeline],0) + (timelineLength*ally[i].time) + ui.border,timelineMiddle);
+		//this is so that the ui is not interrupted when instances are deleted
+		if (controller.ally[i] != undefined) {
+			draw_sprite(sMini,0,array_get(panel[uiPanel.timeline],0) + (timelineLength*ally[i].time) + ui.border,timelineMiddle);
+		}
 	}
 	
 	//For each enemy.
