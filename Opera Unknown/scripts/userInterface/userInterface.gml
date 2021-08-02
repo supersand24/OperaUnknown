@@ -69,7 +69,10 @@ function userInterface(){
 	
 	//For each enemy.
 	for (var i = 0; i < array_length(enemy); i++) {
-		draw_sprite(sMiniGrunt,0,array_get(panel[uiPanel.timeline],0) + (timelineLength*enemy[i].time) + ui.border,timelineMiddle + 1);
+		//this is so that the ui is not interrupted when instances are deleted
+		if (controller.enemy[i] != undefined) {
+			draw_sprite(sMiniGrunt,0,array_get(panel[uiPanel.timeline],0) + (timelineLength*enemy[i].time) + ui.border,timelineMiddle + 1);
+		}
 	}
 	
 	//Inventory Slots - P1

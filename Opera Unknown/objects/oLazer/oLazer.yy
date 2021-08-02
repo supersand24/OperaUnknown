@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "Sprite3",
-    "path": "sprites/Sprite3/Sprite3.yy",
+    "name": "sLazer",
+    "path": "sprites/sLazer/sLazer.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oEnemyParent",
-    "path": "objects/oEnemyParent/oEnemyParent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -25,15 +22,13 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [
-    {"propertyId":{"name":"burst","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-  ],
+  "overriddenProperties": [],
   "parent": {
-    "name": "enemies",
-    "path": "folders/Objects/Entities/units/enemies.yy",
+    "name": "misc",
+    "path": "folders/Objects/misc.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCommander",
+  "name": "oLazer",
   "tags": [],
   "resourceType": "GMObject",
 }
