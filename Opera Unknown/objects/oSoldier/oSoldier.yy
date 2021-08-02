@@ -1,11 +1,14 @@
 {
   "spriteId": {
-    "name": "Sprite3",
-    "path": "sprites/Sprite3/Sprite3.yy",
+    "name": "sSoldier",
+    "path": "sprites/sSoldier/sSoldier.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sSoldier",
+    "path": "sprites/sSoldier/sSoldier.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "oEnemyParent",

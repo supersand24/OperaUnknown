@@ -64,5 +64,7 @@ p2 = 0;
 
 
 enemy[0] = instance_create_layer(5*tile_size,8*tile_size,"Enemies",oGrunt);
-enemy[1] = instance_create_layer(6*tile_size,8*tile_size,"Enemies",oGrunt);
-enemy[2] = instance_create_layer(10*tile_size,10*tile_size,"Enemies",oGrunt);
+enemy[1] = instance_create_layer(6*tile_size,8*tile_size,"Enemies",oSoldier);
+enemy[2] = instance_create_layer(10*tile_size,10*tile_size,"Enemies",oPuppy);
+enemy[3] = instance_create_layer(10*tile_size,11*tile_size,"Enemies",oBeast);
+enemy[4] = instance_create_layer(10*tile_size,12*tile_size,"Enemies",oRobot);
