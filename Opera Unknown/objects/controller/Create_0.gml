@@ -47,22 +47,23 @@ enum itemIndex {
 	nothing
 }
 
+enum playerInput {
+	left, up, right, down, enter, length
+}
+
 //Default arrays
 ally = undefined;
 enemy = undefined;
 
 ally[0] = instance_create_layer(2*tile_size,2*tile_size,"Allies",oPlayer);
-//ally[1] = instance_create_layer(3*tile_size,2*tile_size,"Allies",oPlayer);
-//ally[2] = instance_create_layer(4*tile_size,2*tile_size,"Allies",oPlayer);
-//ally[3] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
-//ally[4] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
-//ally[5] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
 
 //Link players to controller
 p1 = 0;
 p2 = 0;
 
-
 enemy[0] = instance_create_layer(5*tile_size,8*tile_size,"Enemies",oGrunt);
-enemy[1] = instance_create_layer(6*tile_size,8*tile_size,"Enemies",oGrunt);
-enemy[2] = instance_create_layer(10*tile_size,10*tile_size,"Enemies",oGrunt);
+
+p1_menu = false;
+p2_menu = false;
+
+menu_option = 0;
