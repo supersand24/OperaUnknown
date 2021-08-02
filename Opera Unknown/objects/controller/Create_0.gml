@@ -34,6 +34,18 @@ enum unitStates {
 	idle, walking
 }
 
+enum weapon {
+	pistol, smg, assualt_rifle, lmg, dmr
+}
+
+
+//                           [range, dmg, burst]
+guns[weapon.pistol] =        [3, 5, 1];
+guns[weapon.smg] =           [3, 5, 3];
+guns[weapon.assualt_rifle] = [6, 12, 2];
+guns[weapon.lmg] =           [6, 12, 3];
+guns[weapon.dmr] =           [8, 30, 1];
+
 //							  [	Left,									Top,									Right,								Bottom									];
 panel[uiPanel.healthbarp1]	= [	ui.left,								ui.top + 80,							ui.right,							ui.bottom								];
 panel[uiPanel.healthbarp2]	= [	ui.right/2,								ui.top + 80,							ui.right,							ui.bottom								];
