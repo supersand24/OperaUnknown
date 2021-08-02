@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite3",
-    "path": "sprites/Sprite3/Sprite3.yy",
+    "name": "sCommander",
+    "path": "sprites/sCommander/sCommander.yy",
   },
   "solid": false,
   "visible": true,

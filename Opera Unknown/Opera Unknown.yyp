@@ -41,6 +41,7 @@
     {"id":{"name":"togglePlayers","path":"scripts/togglePlayers/togglePlayers.yy",},"order":1,},
     {"id":{"name":"shoot","path":"scripts/shoot/shoot.yy",},"order":0,},
     {"id":{"name":"fn_text","path":"fonts/fn_text/fn_text.yy",},"order":0,},
+    {"id":{"name":"sCommander","path":"sprites/sCommander/sCommander.yy",},"order":7,},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"order":0,},
     {"id":{"name":"oLazer","path":"objects/oLazer/oLazer.yy",},"order":1,},
     {"id":{"name":"target","path":"scripts/target/target.yy",},"order":1,},

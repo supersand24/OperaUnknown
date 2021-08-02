@@ -7,9 +7,9 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 2,
-  "bbox_right": 22,
-  "bbox_top": 2,
+  "bbox_left": 1,
+  "bbox_right": 24,
+  "bbox_top": 1,
   "bbox_bottom": 29,
   "HTile": false,
   "VTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bb8b2b4e-c17c-4313-973b-38f07c4358a5","path":"sprites/sBerserker/sBerserker.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bb8b2b4e-c17c-4313-973b-38f07c4358a5","path":"sprites/sBerserker/sBerserker.yy",},"LayerId":{"name":"43657e07-39f7-4731-a1f5-c86dd582ff5c","path":"sprites/sBerserker/sBerserker.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBerserker","path":"sprites/sBerserker/sBerserker.yy",},"resourceVersion":"1.0","name":"bb8b2b4e-c17c-4313-973b-38f07c4358a5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d287fab2-7350-48a4-8c05-8b87730c13f8","path":"sprites/sCommander/sCommander.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d287fab2-7350-48a4-8c05-8b87730c13f8","path":"sprites/sCommander/sCommander.yy",},"LayerId":{"name":"64536a00-8965-4b34-9473-1f329cb7dfca","path":"sprites/sCommander/sCommander.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCommander","path":"sprites/sCommander/sCommander.yy",},"resourceVersion":"1.0","name":"d287fab2-7350-48a4-8c05-8b87730c13f8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sBerserker","path":"sprites/sBerserker/sBerserker.yy",},
+    "spriteId": {"name":"sCommander","path":"sprites/sCommander/sCommander.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"883aafaf-5536-4e9e-b0cb-6a42c7f3d2a3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bb8b2b4e-c17c-4313-973b-38f07c4358a5","path":"sprites/sBerserker/sBerserker.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d9e73783-b549-4b77-88f1-330ebf75ad65","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d287fab2-7350-48a4-8c05-8b87730c13f8","path":"sprites/sCommander/sCommander.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sBerserker","path":"sprites/sBerserker/sBerserker.yy",},
+    "parent": {"name":"sCommander","path":"sprites/sCommander/sCommander.yy",},
     "resourceVersion": "1.3",
-    "name": "sBerserker",
+    "name": "sCommander",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"43657e07-39f7-4731-a1f5-c86dd582ff5c","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"64536a00-8965-4b34-9473-1f329cb7dfca","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/units.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sBerserker",
+  "name": "sCommander",
   "tags": [],
   "resourceType": "GMSprite",
 }

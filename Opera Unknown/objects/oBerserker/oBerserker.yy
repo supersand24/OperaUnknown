@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite3",
-    "path": "sprites/Sprite3/Sprite3.yy",
+    "name": "sBerserker",
+    "path": "sprites/sBerserker/sBerserker.yy",
   },
   "solid": false,
   "visible": true,
