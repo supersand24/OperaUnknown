@@ -1,5 +1,9 @@
 /// @description Game Start
 
+//creates an intial random seed so every play through isnt the same
+randomise();
+
+
 enum gameState {
 	battle,
 	path
@@ -59,11 +63,14 @@ enum itemIndex {
 	nothing
 }
 
+//types of enemies
+enemyTypes = [oRobot, oPuppy, oGrunt, oSoldier, oBeast, oSniper, oBerserker, oCommander];
+
 //Default arrays
 ally = undefined;
 enemy = undefined;
 
-ally[0] = instance_create_layer(2*tile_size,2*tile_size,"Allies",oPlayer);
+ally[0] = instance_create_layer(20*tile_size,20*tile_size,"Allies",oPlayer);
 //ally[1] = instance_create_layer(3*tile_size,2*tile_size,"Allies",oPlayer);
 //ally[2] = instance_create_layer(4*tile_size,2*tile_size,"Allies",oPlayer);
 //ally[3] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
@@ -75,11 +82,13 @@ p1 = 0;
 p2 = 0;
 
 
-enemy[0] = instance_create_layer(5*tile_size,8*tile_size,"Enemies",oGrunt);
+/*enemy[0] = instance_create_layer(5*tile_size,8*tile_size,"Enemies",oGrunt);
 enemy[1] = instance_create_layer(6*tile_size,8*tile_size,"Enemies",oSoldier);
 enemy[2] = instance_create_layer(10*tile_size,10*tile_size,"Enemies",oPuppy);
 enemy[3] = instance_create_layer(10*tile_size,11*tile_size,"Enemies",oBeast);
 enemy[4] = instance_create_layer(10*tile_size,12*tile_size,"Enemies",oRobot);
 enemy[5] = instance_create_layer(10*tile_size,13*tile_size,"Enemies",oBerserker);
 enemy[6] = instance_create_layer(10*tile_size,14*tile_size,"Enemies",oCommander);
-enemy[7] = instance_create_layer(10*tile_size,15*tile_size,"Enemies",oSniper);
+enemy[7] = instance_create_layer(10*tile_size,15*tile_size,"Enemies",oSniper);*/
+
+setRoom();
