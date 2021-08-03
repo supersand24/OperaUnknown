@@ -71,11 +71,11 @@ ally = undefined;
 enemy = undefined;
 
 ally[0] = instance_create_layer(20*tile_size,20*tile_size,"Allies",oPlayer);
-//ally[1] = instance_create_layer(3*tile_size,2*tile_size,"Allies",oPlayer);
-//ally[2] = instance_create_layer(4*tile_size,2*tile_size,"Allies",oPlayer);
-//ally[3] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
-//ally[4] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
-//ally[5] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
+ally[1] = instance_create_layer(3*tile_size,2*tile_size,"Allies",oPlayer);
+ally[2] = instance_create_layer(4*tile_size,2*tile_size,"Allies",oPlayer);
+ally[3] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
+ally[4] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
+ally[5] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
 
 //Link players to controller
 p1 = 0;
