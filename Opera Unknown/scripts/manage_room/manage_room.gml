@@ -11,7 +11,7 @@ function setRoom() {
 	//clearRoom();
 	moveAllies();
 	if (last_door == 0) {
-		setWalls(40,75);
+		setWalls(40,75); //40, 75
 	} else if (last_door == 1) {
 		setWalls(50,100)
 	} else if (last_door == 2) {
@@ -45,37 +45,39 @@ function getTypes() {
 	
 	if roomCount == 0 {
 		types = returnType(0, 2);
-	}
 	
-	if (last_door == 0 && roomCount > 0) {
-		if roomCount > 0 && roomCount <= 4 {
-			types = returnType(0, 3);
-		} else if roomCount > 4 && roomCount <= 10 {
-			types =  returnType(0, 4);
-		} else if roomCount > 10 && roomCount <= 15 {
-			types =  returnType(0, 5);
-		} else if roomCount > 15 && roomCount <= 25 {
-			types =  returnType(0, 7);
-		} else {
-			types = enemyTypes;
-		}
-	
-	} else if (last_door == 1 && roomCount > 0) {
-		if roomCount > 0 && roomCount <= 4 {
-			types = returnType(0, 4);
-		} else if roomCount > 4 && roomCount <= 10 {
-			types =  returnType(3, 7);
-		} else if roomCount > 10 && roomCount <= 15 {
-			types =  returnType(3,8)
-		}
-	
-	} else if (last_door == 2 && roomCount > 0) {
-		if roomCount > 0 && roomCount <= 4 {
-			types = returnType(0, 4);
-		} else if roomCount > 4 && roomCount <= 10 {
-			types =  returnType(0, 6);
-		} else if roomCount > 10 && roomCount <= 15 {
-			types =  enemyTypes;
+	} else {
+		switch (last_door) {
+			case 0:
+				if roomCount > 0 && roomCount <= 4 {
+					types = returnType(0, 3);
+				} else if roomCount > 4 && roomCount <= 10 {
+					types =  returnType(0, 4);
+				} else if roomCount > 10 && roomCount <= 15 {
+					types =  returnType(0, 5);
+				} else if roomCount > 15 && roomCount <= 25 {
+					types =  returnType(0, 7);
+				} else {
+					types = enemyTypes;
+				}
+				break;
+			case 1:
+				if roomCount > 0 && roomCount <= 4 {
+					types = returnType(0, 4);
+				} else if roomCount > 4 && roomCount <= 10 {
+					types =  returnType(3, 7);
+				} else if roomCount > 10 && roomCount <= 15 {
+					types =  returnType(3,8)
+				}
+				break;
+			case 2:
+				if roomCount > 0 && roomCount <= 4 {
+					types = returnType(0, 4);
+				} else if roomCount > 4 && roomCount <= 10 {
+					types =  returnType(0, 6);
+				} else if roomCount > 10 && roomCount <= 15 {
+					types =  enemyTypes;
+				}
 		}
 	}
 	
@@ -88,56 +90,59 @@ function getCount() {
 	
 	if roomCount == 0 {
 		count = 4;
-	}
 	
-	if (last_door == 0 && roomCount > 0) {
-		if roomCount > 0 && roomCount <= 4 {
-			count = irandom_range(4, 7);
-		} else if roomCount > 4 && roomCount <= 10 {
-			count = irandom_range(8, 15);
-		} else if roomCount > 10 && roomCount <= 15 {
-			count = irandom_range(15, 25);
-		} else if roomCount > 15 && roomCount <= 25 {
-			count = irandom_range(25, 40);
-		} else {
-			count = irandom_range(roomCount, roomCount*2);
-			if (count > 100) {
-				count = 100;
+	} else {
+		switch (last_door) {
+			case 0:
+				if roomCount > 0 && roomCount <= 4 {
+					count = irandom_range(4, 7);
+				} else if roomCount > 4 && roomCount <= 10 {
+					count = irandom_range(8, 15);
+				} else if roomCount > 10 && roomCount <= 15 {
+					count = irandom_range(15, 25);
+				} else if roomCount > 15 && roomCount <= 25 {
+					count = irandom_range(25, 40);
+				} else {
+					count = irandom_range(roomCount, roomCount*2);
+					if (count > 100) {
+						count = 100;
+					}
+				}
+				break;
+			case 1:	
+				if roomCount > 0 && roomCount <= 4 {
+					count = irandom_range(3, 6);
+				} else if roomCount > 4 && roomCount <= 10 {
+					count = irandom_range(4, 10);
+				} else if roomCount > 10 && roomCount <= 15 {
+					count = irandom_range(12, 15);
+				} else if roomCount > 15 && roomCount <= 25 {
+					count = irandom_range(15, 20);
+				} else {
+					count = irandom_range(roomCount/2, roomCount);
+					if count > 100 {
+						count = 100
+					}	
+				}
+				break;
+			case 2:
+				if roomCount > 0 && roomCount <= 4 {
+					count = irandom_range(5, 10);
+				} else if roomCount > 4 && roomCount <= 10 {
+					count = irandom_range(12, 18);
+				} else if roomCount > 10 && roomCount <= 15 {
+					count = irandom_range(20, 30);
+				} else if roomCount > 15 && roomCount <= 25 {
+					count = irandom_range(30, 50);
+				} else {
+					count = irandom_range(roomCount, roomCount*3);
+					if count > 100 {
+						count = 100
+					}	
+				}
+				break;
 			}
 		}
-	
-	} else if (last_door == 1 && roomCount > 0) {
-		if roomCount > 0 && roomCount <= 4 {
-			count = irandom_range(3, 6);
-		} else if roomCount > 4 && roomCount <= 10 {
-			count = irandom_range(4, 10);
-		} else if roomCount > 10 && roomCount <= 15 {
-			count = irandom_range(12, 15);
-		} else if roomCount > 15 && roomCount <= 25 {
-			count = irandom_range(15, 20);
-		} else {
-			count = irandom_range(roomCount/2, roomCount);
-			if count > 100 {
-				count = 100
-			}	
-		}
-	
-	} else if (last_door == 2 && roomCount > 0) {
-		if roomCount > 0 && roomCount <= 4 {
-			count = irandom_range(5, 10);
-		} else if roomCount > 4 && roomCount <= 10 {
-			count = irandom_range(12, 18);
-		} else if roomCount > 10 && roomCount <= 15 {
-			count = irandom_range(20, 30);
-		} else if roomCount > 15 && roomCount <= 25 {
-			count = irandom_range(30, 50);
-		} else {
-			count = irandom_range(roomCount, roomCount*3);
-			if count > 100 {
-				count = 100
-			}	
-		}
-	}	
 	
 	return count;
 }
