@@ -176,21 +176,6 @@ function setWalls(int1 , int2) {
 function clearRoom() {
 	instance_destroy(oWall);
 	instance_destroy(oEnemyParent);
-		
-
-	
-	/*will not work if enemy array in use since uiInterfaces cant find the insatnce
-	var layerid2 = layer_get_id("Enemies");
-	var a = layer_get_all_elements(layerid2);
-
-	for (var i = 0; i < array_length(a); i++;) {
-		if (layer_get_element_type(a[i]) == layerelementtype_instance && object_get_parent(a[i]) != oPlayer) {
-			//deletme = a[i];
-			//instance_create_layer(deletme.x,deletme.y,"Enemies", oWall);
-			instance_destroy(a[i]);
-		}
-	}*/
-
 }
 
 //resets the game to a state of no enemies or walls
