@@ -2,11 +2,16 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 gml_pragma("global", "MACRO()");
 
-#macro tile_width 20
-#macro tile_height 20
+//size of the tile
+#macro tile_size 30
 
+//half of tile
+#macro tile_half tile_size/2
+
+//size of the room for checking out of bounds
 #macro rm_size 600
 
+//collection for directions unit can move
 enum directions {
 	right,
 	up,
@@ -14,6 +19,7 @@ enum directions {
 	down
 }
 
+//changes in x and y based on direction
 global.components = [];
 global.components[directions.right] = [1,0];
 global.components[directions.up] = [0,-1];
