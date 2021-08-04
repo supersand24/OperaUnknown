@@ -146,7 +146,7 @@ function getCount() {
 }
 
 
-//draws enemies
+//draws enemies randomly in room
 function setEnemies(count, types) {
 	for (var i = 0; i < count; i++) {
 		var locX = irandom_range(2, 20);
@@ -157,7 +157,7 @@ function setEnemies(count, types) {
 	}
 }
 
-//finds number of walls and draws them
+//finds number of walls and draws them randomly in room
 function setWalls(int1 , int2) {
 	for (var i = 0; i < irandom_range(int1, int2+1); i++) {
 		var wallX = irandom_range(2, 18);
@@ -173,19 +173,13 @@ function setWalls(int1 , int2) {
 }
 
 //clears all current walls and enemies
-/*function clearRoom() {
-	var layerid = layer_get_id("walls");
-	var a = layer_get_all_elements(layerid);
+function clearRoom() {
+	instance_destroy(oWall);
+	instance_destroy(oEnemyParent);
+		
 
-	for (var i = 0; i < array_length(a); i++;) {
-		if (layer_get_element_type(a[i]) == layerelementtype_instance && object_get_parent(a[i]) != oPlayer) {
-			//deletme = a[i];
-			//instance_create_layer(deletme.x,deletme.y,"Enemies", oWall);
-			instance_destroy(a[i]);
-		}
-	}
 	
-	will not work if enemy array in use since uiInterfaces cant find the insatnce
+	/*will not work if enemy array in use since uiInterfaces cant find the insatnce
 	var layerid2 = layer_get_id("Enemies");
 	var a = layer_get_all_elements(layerid2);
 
@@ -197,7 +191,7 @@ function setWalls(int1 , int2) {
 		}
 	}*/
 
-//}
+}
 
 //resets the game to a state of no enemies or walls
 //and resets the roomCount to 0
