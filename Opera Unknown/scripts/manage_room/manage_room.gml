@@ -34,9 +34,9 @@ function moveAllies() {
 		ally[i].y = newY * tile_size;
 		newX++;
 		
-		if newX == 3 {
+		if newX == 2 {
 			newX = 0;
-			newY = 2;
+			newY++;
 		}
 	}
 }
