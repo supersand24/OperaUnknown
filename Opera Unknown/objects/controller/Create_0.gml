@@ -66,23 +66,21 @@ enemyTypes = [oRobot, oPuppy, oGrunt, oSoldier, oBeast, oSniper, oBerserker, oCo
 
 enum playerInput {
 	left, up, right, down, enter, length
+}
 
 //Default arrays
 ally = undefined;
 enemy = undefined;
 
 ally[0] = instance_create_layer(0*tile_size,1*tile_size,"Allies",oPlayer);
-ally[1] = instance_create_layer(3*tile_size,2*tile_size,"Allies",oPlayer);
-ally[2] = instance_create_layer(4*tile_size,2*tile_size,"Allies",oPlayer);
-ally[3] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
-ally[4] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
-//ally[5] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
+//ally[1] = instance_create_layer(3*tile_size,2*tile_size,"Allies",oPlayer);
+//ally[2] = instance_create_layer(4*tile_size,2*tile_size,"Allies",oPlayer);
+//ally[3] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
+//ally[4] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
 
 //Link players to controller
 p1 = 0;
 p2 = 0;
-
-enemy[0] = instance_create_layer(5*tile_size,5*tile_size,"Enemies",oGrunt);
 
 enum menuState {
 	movement, menu, attacking, getTargets
@@ -94,4 +92,4 @@ p2_menu = menuState.movement;
 menu_option = 0;
 menu_target = 0;
 
-setRoom(3);
+setRoom();
