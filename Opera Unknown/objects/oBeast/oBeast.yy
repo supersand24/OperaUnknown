@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite3",
-    "path": "sprites/Sprite3/Sprite3.yy",
+    "name": "sBeast",
+    "path": "sprites/sBeast/sBeast.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,8 +26,10 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"mov","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"6","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"max_hp","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"8","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"spd","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"7","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"max_hp","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"30","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"range","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"4","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"dmg","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "enemies",

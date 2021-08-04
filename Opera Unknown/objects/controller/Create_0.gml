@@ -1,5 +1,7 @@
 /// @description Game Start
 
+randomise();
+
 enum gameState {
 	battle,
 	path
@@ -34,6 +36,18 @@ enum unitStates {
 	idle, walking
 }
 
+enum weapon {
+	pistol, smg, assault_rifle, lmg, dmr
+}
+
+
+//								[range, dmg, burst]
+guns[weapon.pistol]				= [3, 5, 1];
+guns[weapon.smg]				= [3, 5, 3];
+guns[weapon.assault_rifle]		= [6, 12, 2];
+guns[weapon.lmg]				= [6, 12, 3];
+guns[weapon.dmr]				= [8, 30, 1];
+
 //							  [	Left,									Top,									Right,								Bottom									];
 panel[uiPanel.healthbarp1]	= [	ui.left,								ui.top + 80,							ui.right,							ui.bottom								];
 panel[uiPanel.healthbarp2]	= [	ui.right/2,								ui.top + 80,							ui.right,							ui.bottom								];
@@ -47,15 +61,22 @@ enum itemIndex {
 	nothing
 }
 
+//types of enemies
+enemyTypes = [oRobot, oPuppy, oGrunt, oSoldier, oBeast, oSniper, oBerserker, oCommander];
+
 enum playerInput {
 	left, up, right, down, enter, length
-}
 
 //Default arrays
 ally = undefined;
 enemy = undefined;
 
-ally[0] = instance_create_layer(2*tile_size,2*tile_size,"Allies",oPlayer);
+ally[0] = instance_create_layer(0*tile_size,1*tile_size,"Allies",oPlayer);
+ally[1] = instance_create_layer(3*tile_size,2*tile_size,"Allies",oPlayer);
+ally[2] = instance_create_layer(4*tile_size,2*tile_size,"Allies",oPlayer);
+ally[3] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
+ally[4] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
+//ally[5] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
 
 //Link players to controller
 p1 = 0;
@@ -71,5 +92,6 @@ p1_menu = menuState.movement;
 p2_menu = menuState.movement;
 
 menu_option = 0;
-
 menu_target = 0;
+
+setRoom(3);

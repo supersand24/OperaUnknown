@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite3",
-    "path": "sprites/Sprite3/Sprite3.yy",
+    "name": "sPuppy",
+    "path": "sprites/sPuppy/sPuppy.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,9 +26,10 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"mov","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"dmg","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"max_hp","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"4","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"spd","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"8","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"dmg","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"max_hp","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"15","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"range","path":"objects/oUnit/oUnit.yy",},"objectId":{"name":"oUnit","path":"objects/oUnit/oUnit.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "enemies",

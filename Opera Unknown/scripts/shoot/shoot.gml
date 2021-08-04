@@ -13,5 +13,4 @@ function shoot(i){
 	if (controller.enemy[i].hp <= 0) {
 		controller.enemy[i] = undefined;
 	}*/
-	
 }
