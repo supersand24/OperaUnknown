@@ -148,7 +148,7 @@ function setEnemies(count, types) {
 	for (var i = 0; i < count; i++) {
 		var locX = irandom_range(2, 20);
 		var locY = irandom_range(2, 19);
-		if (!place_meeting(locX , locY, all)) {
+		if (!position_meeting(locX , locY, all)) {
 			enemy[i] = instance_create_layer(locX*tile_size,locY*tile_size,"Enemies", types[irandom(array_length(types)-1)]);
 		}
 	}
@@ -159,7 +159,7 @@ function setWalls(int1 , int2) {
 	for (var i = 0; i < irandom_range(int1, int2+1); i++) {
 		var wallX = irandom_range(2, 18);
 		var wallY = irandom_range(0, 19);
-		if (!place_meeting(wallX , wallY, all)) {
+		if (!position_meeting(wallX , wallY, all)) {
 			instance_create_layer(wallX*tile_size,wallY*tile_size,"walls", oWall);
 		} /*else {
 			if (int2 < int1) {
