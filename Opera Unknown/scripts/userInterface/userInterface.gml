@@ -92,9 +92,16 @@ function userInterface(){
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_left);
 	draw_set_font(fn_text);
-	draw_text(array_get(panel[uiPanel.actionsp1],0) + ui.border, array_get(panel[uiPanel.actionsp1],1) + 0, "Attack");
-	draw_text(array_get(panel[uiPanel.actionsp1],0) + ui.border, array_get(panel[uiPanel.actionsp1],1) + 15, "Items");
-	draw_text(array_get(panel[uiPanel.actionsp1],0) + ui.border, array_get(panel[uiPanel.actionsp1],1) + 30, "Exit");
+	var text;
+	text[0] = "Attack"
+	text[1] = "Items"
+	text[2] = "Exit"
+	if (p1_menu) {
+		text[menu_option] = " > " + string(text[menu_option]);
+	}
+	draw_text(array_get(panel[uiPanel.actionsp1],0) + ui.border, array_get(panel[uiPanel.actionsp1],1) + 0, text[0]);
+	draw_text(array_get(panel[uiPanel.actionsp1],0) + ui.border, array_get(panel[uiPanel.actionsp1],1) + 15, text[1]);
+	draw_text(array_get(panel[uiPanel.actionsp1],0) + ui.border, array_get(panel[uiPanel.actionsp1],1) + 30, text[2]);
 	
 	//Score - Centered
 	draw_set_halign(fa_center);
