@@ -1,6 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-
+//a script to control all aspects of wall and enemy spawning and removal
 
 //last_door refers to the last door type choose by the players
 //0 is the normal encounter
@@ -10,7 +8,6 @@
 
 //sets all insatnces in the room
 function setRoom() {
-	randomise();
 	//clearRoom();
 	moveAllies();
 	if (last_door == 0) {
@@ -164,11 +161,11 @@ function setWalls(int1 , int2) {
 		var wallY = irandom_range(0, 19);
 		if (!place_meeting(wallX , wallY, all)) {
 			instance_create_layer(wallX*tile_size,wallY*tile_size,"walls", oWall);
-		} else {
+		} /*else {
 			if (int2 < int1) {
 				setWalls(int1, int2-10);
 			}
-		}
+		}*/
 	}
 }
 
@@ -181,7 +178,7 @@ function clearRoom() {
 //resets the game to a state of no enemies or walls
 //and resets the roomCount to 0
 function resetRoom() {
-	//clearRoom();
+	clearRoom();
 	setRoom();
 	roomCount = 0;
 	

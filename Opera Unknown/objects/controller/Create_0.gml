@@ -1,5 +1,6 @@
 /// @description Game Start
 
+randomise();
 
 enum gameState {
 	battle,
