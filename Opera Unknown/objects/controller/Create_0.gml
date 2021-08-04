@@ -1,8 +1,5 @@
 /// @description Game Start
 
-//creates an intial random seed so every play through isnt the same
-randomise();
-
 
 enum gameState {
 	battle,
@@ -70,12 +67,12 @@ enemyTypes = [oRobot, oPuppy, oGrunt, oSoldier, oBeast, oSniper, oBerserker, oCo
 ally = undefined;
 enemy = undefined;
 
-ally[0] = instance_create_layer(20*tile_size,20*tile_size,"Allies",oPlayer);
+ally[0] = instance_create_layer(0*tile_size,1*tile_size,"Allies",oPlayer);
 ally[1] = instance_create_layer(3*tile_size,2*tile_size,"Allies",oPlayer);
 ally[2] = instance_create_layer(4*tile_size,2*tile_size,"Allies",oPlayer);
 ally[3] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
 ally[4] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
-ally[5] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
+//ally[5] = instance_create_layer(5*tile_size,2*tile_size,"Allies",oPlayer);
 
 //Link players to controller
 p1 = 0;
@@ -91,4 +88,4 @@ enemy[5] = instance_create_layer(10*tile_size,13*tile_size,"Enemies",oBerserker)
 enemy[6] = instance_create_layer(10*tile_size,14*tile_size,"Enemies",oCommander);
 enemy[7] = instance_create_layer(10*tile_size,15*tile_size,"Enemies",oSniper);*/
 
-setRoom();
+setRoom(3);
