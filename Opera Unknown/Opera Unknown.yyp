@@ -48,6 +48,7 @@
     {"id":{"name":"drawRange","path":"scripts/drawRange/drawRange.yy",},"order":2,},
     {"id":{"name":"oLazer","path":"objects/oLazer/oLazer.yy",},"order":1,},
     {"id":{"name":"target","path":"scripts/target/target.yy",},"order":1,},
+    {"id":{"name":"aiShoot","path":"scripts/aiShoot/aiShoot.yy",},"order":3,},
     {"id":{"name":"game","path":"rooms/game/game.yy",},"order":0,},
   ],
   "Options": [
