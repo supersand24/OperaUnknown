@@ -150,6 +150,7 @@ function setEnemies(count, types) {
 		var locY = irandom_range(2, 19);
 		if (!position_meeting(locX , locY, all)) {
 			enemy[i] = instance_create_layer(locX*tile_size,locY*tile_size,"Enemies", types[irandom(array_length(types)-1)]);
+			enemy[i].myIndex = i;
 		}
 	}
 }

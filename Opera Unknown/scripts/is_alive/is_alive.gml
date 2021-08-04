@@ -4,6 +4,8 @@
 // if the object is "dead", it deletes the instance
 function is_alive() {
 	if (hp <= 0) {
+		controller.enemy[myIndex] = undefined;
 		instance_destroy();
+		instance_destroy(oLazer);
 	}
 }
