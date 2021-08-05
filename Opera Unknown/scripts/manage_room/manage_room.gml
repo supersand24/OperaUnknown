@@ -17,7 +17,7 @@ function setRoom() {
 	} else if (last_door == 2) {
 		setWalls(10,40);
 	}
-	//placePowerUps()
+	//placeItems()
 	setEnemies(getCount(), getTypes());
 	roomCount++;
 }
@@ -201,7 +201,7 @@ function returnType(a, i) {
 	return type;
 }
 
-function placePowerUps() {
+function placeItems() {
 	//if two player 
 	//place a dmg up and hp up for each player
 	//else only place one of each
