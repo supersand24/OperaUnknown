@@ -5,6 +5,7 @@
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":0,},
     {"id":{"name":"MACRO","path":"scripts/MACRO/MACRO.yy",},"order":2,},
     {"id":{"name":"oCommander","path":"objects/oCommander/oCommander.yy",},"order":5,},
+    {"id":{"name":"oDmgUp","path":"objects/oDmgUp/oDmgUp.yy",},"order":1,},
     {"id":{"name":"oSniper","path":"objects/oSniper/oSniper.yy",},"order":8,},
     {"id":{"name":"useTurn","path":"scripts/useTurn/useTurn.yy",},"order":5,},
     {"id":{"name":"sBerserker","path":"sprites/sBerserker/sBerserker.yy",},"order":6,},
@@ -40,6 +41,7 @@
     {"id":{"name":"fn_bar","path":"fonts/fn_bar/fn_bar.yy",},"order":2,},
     {"id":{"name":"togglePlayers","path":"scripts/togglePlayers/togglePlayers.yy",},"order":3,},
     {"id":{"name":"shoot","path":"scripts/shoot/shoot.yy",},"order":0,},
+    {"id":{"name":"oHpUp","path":"objects/oHpUp/oHpUp.yy",},"order":0,},
     {"id":{"name":"sSniper","path":"sprites/sSniper/sSniper.yy",},"order":8,},
     {"id":{"name":"fn_text","path":"fonts/fn_text/fn_text.yy",},"order":0,},
     {"id":{"name":"manage_room","path":"scripts/manage_room/manage_room.yy",},"order":9,},
@@ -94,6 +96,7 @@
     {"folderPath":"folders/Scripts/shooting.yy","order":7,"resourceVersion":"1.0","name":"shooting","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/misc.yy","order":8,"resourceVersion":"1.0","name":"misc","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/units.yy","order":7,"resourceVersion":"1.0","name":"units","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/items.yy","order":9,"resourceVersion":"1.0","name":"items","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
