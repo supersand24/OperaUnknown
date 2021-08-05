@@ -17,7 +17,7 @@ function setRoom() {
 	} else if (last_door == 2) {
 		setWalls(10,40);
 	}
-	//placeItems()
+	placeItems();
 	setEnemies(getCount(), getTypes());
 	roomCount++;
 }
@@ -180,6 +180,7 @@ function setWalls(int1 , int2) {
 function clearRoom() {
 	instance_destroy(oWall);
 	instance_destroy(oEnemyParent);
+	instance_destroy(oItemParent);
 }
 
 //resets the game to a state of no enemies or walls
@@ -206,18 +207,22 @@ function placeItems() {
 	//place a dmg up and hp up for each player
 	//else only place one of each
 	
-	if (roomCount == 0) {
+	/*&if (roomCount == 0) {
 		return;
-	} else {
+	} else {*/
+		do {
+		
 		var item1X = irandom_range(2, 19);
 		var item1Y = irandom_range(2, 19);
 		var item2X = irandom_range(2, 19);
 		var item2Y = irandom_range(2, 19);
-		if (!position_meeting(item1X , item1Y, all) && !position_meeting(item2X , item2Y, all)) {
-			instance_create_layer(item1X*tile_size,item1Y*tile_size,"instances", oDmgUp);
-			instance_create_layer(item2X*tile_size,item2Y*tile_size,"instances", oHpUp);
-		}
-	}	
+		} 
+		until (!position_meeting(item1X , item1Y, all) && !position_meeting(item2X , item2Y, all));
+		
+		instance_create_layer(item1X*tile_size,item1Y*tile_size,"walls", oDmgUp);
+		instance_create_layer(item2X*tile_size,item2Y*tile_size,"walls", oHpUp);
+		
+	//}	
 }			
 
 
