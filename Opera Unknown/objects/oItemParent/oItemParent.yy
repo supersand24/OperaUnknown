@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "sDmgUp",
-    "path": "sprites/sDmgUp/sDmgUp.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oItemParent",
-    "path": "objects/oItemParent/oItemParent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -23,9 +17,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -33,7 +25,7 @@
     "path": "folders/Objects/items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oDmgUp",
+  "name": "oItemParent",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -202,7 +202,7 @@ function returnType(a, i) {
 }
 
 function placeItems() {
-	//if two player 
+	//if two player
 	//place a dmg up and hp up for each player
 	//else only place one of each
 	

@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"oBerserker","path":"objects/oBerserker/oBerserker.yy",},"order":4,},
     {"id":{"name":"sBeast","path":"sprites/sBeast/sBeast.yy",},"order":4,},
+    {"id":{"name":"sDmgUp","path":"sprites/sDmgUp/sDmgUp.yy",},"order":0,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":0,},
     {"id":{"name":"MACRO","path":"scripts/MACRO/MACRO.yy",},"order":2,},
     {"id":{"name":"oCommander","path":"objects/oCommander/oCommander.yy",},"order":5,},
@@ -22,6 +23,7 @@
     {"id":{"name":"oPuppy","path":"objects/oPuppy/oPuppy.yy",},"order":6,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},"order":2,},
+    {"id":{"name":"sHpUp","path":"sprites/sHpUp/sHpUp.yy",},"order":1,},
     {"id":{"name":"sMini","path":"sprites/sMini/sMini.yy",},"order":0,},
     {"id":{"name":"move","path":"scripts/move/move.yy",},"order":1,},
     {"id":{"name":"oRobot","path":"objects/oRobot/oRobot.yy",},"order":1,},
@@ -33,6 +35,7 @@
     {"id":{"name":"movement_step","path":"scripts/movement_step/movement_step.yy",},"order":0,},
     {"id":{"name":"controller","path":"objects/controller/controller.yy",},"order":0,},
     {"id":{"name":"oGrunt","path":"objects/oGrunt/oGrunt.yy",},"order":2,},
+    {"id":{"name":"oItemParent","path":"objects/oItemParent/oItemParent.yy",},"order":2,},
     {"id":{"name":"sPuppy","path":"sprites/sPuppy/sPuppy.yy",},"order":3,},
     {"id":{"name":"sLazer","path":"sprites/sLazer/sLazer.yy",},"order":4,},
     {"id":{"name":"fn_score","path":"fonts/fn_score/fn_score.yy",},"order":1,},
@@ -97,6 +100,7 @@
     {"folderPath":"folders/Objects/misc.yy","order":8,"resourceVersion":"1.0","name":"misc","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/units.yy","order":7,"resourceVersion":"1.0","name":"units","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/items.yy","order":9,"resourceVersion":"1.0","name":"items","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/items.yy","order":8,"resourceVersion":"1.0","name":"items","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
