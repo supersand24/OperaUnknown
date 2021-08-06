@@ -152,12 +152,13 @@ function getCount() {
 //draws enemies randomly in room
 function setEnemies(count, types) {
 	for (var i = 0; i < count; i++) {
+		do {
 		var locX = irandom_range(2, 19);
 		var locY = irandom_range(2, 19);
-		if (!position_meeting(locX , locY, all)) {
+		}
+		until position_empty(locX*tile_size, locY*tile_size);
 			enemy[i] = instance_create_layer(locX*tile_size,locY*tile_size,"Enemies", types[irandom(array_length(types)-1)]);
 			enemy[i].myIndex = i;
-		}
 	}
 }
 
@@ -166,7 +167,7 @@ function setWalls(int1 , int2) {
 	for (var i = 0; i < irandom_range(int1, int2+1); i++) {
 		var wallX = irandom_range(2, 18);
 		var wallY = irandom_range(0, 19);
-		if (!position_meeting(wallX , wallY, all)) {
+		if (position_empty(wallX*tile_size , wallY*tile_size)) {
 			instance_create_layer(wallX*tile_size,wallY*tile_size,"walls", oWall);
 		} /*else {
 			if (int2 < int1) {
@@ -216,7 +217,7 @@ function placeItems() {
 		var item2X = irandom_range(2, 19);
 		var item2Y = irandom_range(2, 19);
 		} 
-		until (!position_meeting(item1X , item1Y, all) && !position_meeting(item2X , item2Y, all));
+		until (!position_meeting(item1X*tile_size , item1Y*tile_size, all) && !position_meeting(item2X*tile_size , item2Y*tile_size, all));
 		
 		instance_create_layer(item1X*tile_size,item1Y*tile_size,"walls", oDmgUp);
 		instance_create_layer(item2X*tile_size,item2Y*tile_size,"walls", oHpUp);
