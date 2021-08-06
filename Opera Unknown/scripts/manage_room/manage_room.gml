@@ -165,15 +165,11 @@ function setEnemies(count, types) {
 //finds number of walls and draws them randomly in room
 function setWalls(int1 , int2) {
 	for (var i = 0; i < irandom_range(int1, int2+1); i++) {
+		do {
 		var wallX = irandom_range(2, 18);
 		var wallY = irandom_range(0, 19);
-		if (position_empty(wallX*tile_size , wallY*tile_size)) {
+		} until position_empty(wallX*tile_size, wallY*tile_size);
 			instance_create_layer(wallX*tile_size,wallY*tile_size,"walls", oWall);
-		} /*else {
-			if (int2 < int1) {
-				setWalls(int1, int2-10);
-			}
-		}*/
 	}
 }
 
@@ -217,7 +213,7 @@ function placeItems() {
 		var item2X = irandom_range(2, 19);
 		var item2Y = irandom_range(2, 19);
 		} 
-		until (!position_meeting(item1X*tile_size , item1Y*tile_size, all) && !position_meeting(item2X*tile_size , item2Y*tile_size, all));
+		until position_empty(item1X*tile_size, item1Y*tile_size) && position_empty(item2X*tile_size, item2Y*tile_size);
 		
 		instance_create_layer(item1X*tile_size,item1Y*tile_size,"walls", oDmgUp);
 		instance_create_layer(item2X*tile_size,item2Y*tile_size,"walls", oHpUp);
