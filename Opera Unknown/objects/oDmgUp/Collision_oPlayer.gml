@@ -2,5 +2,5 @@
 // You can write your code in this editor
 instance_destroy();
 with other {
-	dmg += 5;
+	dmg += 2;
 }

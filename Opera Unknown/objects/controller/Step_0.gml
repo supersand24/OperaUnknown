@@ -80,10 +80,10 @@ switch(global.game) {
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
-if (keyboard_check(vk_f1)) {
-	clearRoom();
+if (checkArray(enemy)) {
+	enemy = undefined;
 }
 
-if (keyboard_check(vk_f2)) {
+if (enemy == undefined) {
 	resetRoom();
 }

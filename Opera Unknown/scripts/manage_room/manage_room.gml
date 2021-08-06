@@ -8,7 +8,7 @@
 
 //sets all insatnces in the room
 function setRoom() {
-	//clearRoom();
+	clearRoom();
 	moveAllies();
 	if (last_door == 0) {
 		setWalls(40,75); //40, 75
@@ -186,9 +186,8 @@ function clearRoom() {
 //resets the game to a state of no enemies or walls
 //and resets the roomCount to 0
 function resetRoom() {
-	clearRoom();
 	setRoom();
-	roomCount = 0;
+	//roomCount = 0;
 	
 }
 

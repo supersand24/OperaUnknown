@@ -6,7 +6,7 @@
     "path": "folders/Scripts/unit health.yy",
   },
   "resourceVersion": "1.0",
-  "name": "is_alive",
+  "name": "isArrayUndefined",
   "tags": [],
   "resourceType": "GMScript",
 }
