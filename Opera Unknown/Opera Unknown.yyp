@@ -48,6 +48,7 @@
     {"id":{"name":"oHpUp","path":"objects/oHpUp/oHpUp.yy",},"order":0,},
     {"id":{"name":"sSniper","path":"sprites/sSniper/sSniper.yy",},"order":8,},
     {"id":{"name":"fn_text","path":"fonts/fn_text/fn_text.yy",},"order":0,},
+    {"id":{"name":"sHpTry2","path":"sprites/sHpTry2/sHpTry2.yy",},"order":2,},
     {"id":{"name":"manage_room","path":"scripts/manage_room/manage_room.yy",},"order":9,},
     {"id":{"name":"sCommander","path":"sprites/sCommander/sCommander.yy",},"order":7,},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"order":0,},

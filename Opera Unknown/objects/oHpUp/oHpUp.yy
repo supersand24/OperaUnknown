@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sHpUp",
-    "path": "sprites/sHpUp/sHpUp.yy",
+    "name": "sHpTry2",
+    "path": "sprites/sHpTry2/sHpTry2.yy",
   },
   "solid": false,
   "visible": true,
