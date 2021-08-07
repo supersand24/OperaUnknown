@@ -94,11 +94,66 @@ menu_target = 0;
 
 //setRoom();
 
-global.ctBlob[  0 ] = [ 3 , 3 ];
+global.ctIndexes = false
 
-global.ctBlob[ 16 ] = [ 3 , 0 ];
-global.ctBlob[ 64 ] = [ 2 , 3 ];
-global.ctBlob[  1 ] = [ 3 , 2 ];
-global.ctBlob[  4 ] = [ 0 , 3 ];
+global.ctBlob[   0 ] = [ 3 , 3 ];
 
-global.ctBlob[ 85 ] = [ 8 , 4 ];
+global.ctBlob[   1 ] = [ 3 , 2 ];
+global.ctBlob[   4 ] = [ 0 , 3 ];
+global.ctBlob[  16 ] = [ 3 , 0 ];
+global.ctBlob[  64 ] = [ 2 , 3 ];
+
+global.ctBlob[   5 ] = [ 4 , 3 ];
+global.ctBlob[  20 ] = [ 4 , 0 ];
+global.ctBlob[  80 ] = [ 7 , 0 ];
+global.ctBlob[  65 ] = [ 7 , 3 ];
+
+global.ctBlob[   7 ] = [ 0 , 2 ];
+global.ctBlob[  28 ] = [ 0 , 0 ];
+global.ctBlob[ 112 ] = [ 2 , 0 ];
+global.ctBlob[ 193 ] = [ 2 , 2 ];
+
+global.ctBlob[  17 ] = [ 3 , 1 ];
+global.ctBlob[  68 ] = [ 1 , 3 ];
+
+global.ctBlob[  21 ] = [ 4 , 4 ];
+global.ctBlob[  69 ] = [ 8 , 3 ];
+global.ctBlob[  81 ] = [ 7 , 4 ];
+global.ctBlob[  84 ] = [ 8 , 0 ];
+
+global.ctBlob[  23 ] = [ 4 , 1 ];
+global.ctBlob[  92 ] = [ 6 , 0 ];
+global.ctBlob[ 113 ] = [ 7 , 2 ];
+global.ctBlob[ 197 ] = [ 5 , 3 ];
+
+global.ctBlob[  29 ] = [ 4 , 2 ];
+global.ctBlob[  71 ] = [ 6 , 3 ];
+global.ctBlob[ 116 ] = [ 5 , 0 ];
+global.ctBlob[ 209 ] = [ 7 , 1 ];
+
+global.ctBlob[  31 ] = [ 0 , 1 ];
+global.ctBlob[ 124 ] = [ 1 , 0 ];
+global.ctBlob[ 241 ] = [ 2 , 1 ];
+global.ctBlob[ 199 ] = [ 1 , 2 ];
+
+global.ctBlob[  85 ] = [ 8 , 4 ];
+
+global.ctBlob[  87 ] = [ 9 , 3 ];
+global.ctBlob[  93 ] = [ 9 , 2 ];
+global.ctBlob[ 117 ] = [ 10 , 2 ];
+global.ctBlob[ 213 ] = [ 10 , 3 ];
+
+global.ctBlob[  95 ] = [ 6 , 4 ];
+global.ctBlob[ 125 ] = [ 8 , 2 ];
+global.ctBlob[ 245 ] = [ 5 , 4 ];
+global.ctBlob[ 215 ] = [ 8 , 1 ];
+
+global.ctBlob[ 119 ] = [ 9 , 1 ];
+global.ctBlob[ 221 ] = [ 9 , 0 ];
+
+global.ctBlob[ 127 ] = [ 6 , 2 ];
+global.ctBlob[ 253 ] = [ 5 , 2 ];
+global.ctBlob[ 247 ] = [ 5 , 1 ];
+global.ctBlob[ 223 ] = [ 6 , 1 ];
+
+global.ctBlob[ 255 ] = [ 1 , 1 ];
