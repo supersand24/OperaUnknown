@@ -92,4 +92,13 @@ p2_menu = menuState.movement;
 menu_option = 0;
 menu_target = 0;
 
-setRoom();
+//setRoom();
+
+global.ctBlob[  0 ] = [ 3 , 3 ];
+
+global.ctBlob[ 16 ] = [ 3 , 0 ];
+global.ctBlob[ 64 ] = [ 2 , 3 ];
+global.ctBlob[  1 ] = [ 3 , 2 ];
+global.ctBlob[  4 ] = [ 0 , 3 ];
+
+global.ctBlob[ 85 ] = [ 8 , 4 ];

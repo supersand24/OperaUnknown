@@ -80,10 +80,10 @@ switch(global.game) {
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
-if (checkArray(enemy)) {
-	enemy = undefined;
-}
+//if (checkArray(enemy)) {
+	//enemy = undefined;
+//}
 
-if (enemy == undefined) {
-	resetRoom();
-}
+//if (enemy == undefined) {
+	//resetRoom();
+//}
