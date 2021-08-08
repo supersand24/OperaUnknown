@@ -62,9 +62,9 @@ function makeMaze(start, counter) {
 		return;
 	}
 	
-	if (((cur[0] == 0 || cur[0] == 1 || cur[0] == 2 || cur[0] == 3) && (cur[1] == 0 || cur[1] == 3)) || ((cur[1] == 0 || cur[1] == 1 || cur[1] == 2 || cur[1] == 3) && (cur[0] == 0 || cur[0] == 3)) && counter > 3) {
-		var choice = irandom(3);
-		if choice == 0 {
+	if (((cur[0] == 0 || cur[0] == 1 || cur[0] == 2 || cur[0] == 3) && (cur[1] == 0 || cur[1] == 3)) || ((cur[1] == 0 || cur[1] == 1 || cur[1] == 2 || cur[1] == 3) && (cur[0] == 0 || cur[0] == 3))) {
+		var choice = irandom(4);
+		if choice == 0 && counter > 3 {
 			return;
 			
 		} else {
@@ -190,13 +190,18 @@ function drawWalls() {
 		for (var k = 0; k < 4; k++) {
 			if global.bigGrid[c][k] != 0 {
 				show_debug_message("c is " + string(c) + " and k is " + string(k));
-				draw_text((c+1)*tile_size*3, (k+1)*tile_size*3, global.bigGrid[c][k]);
-				draw_rectangle(c*tile_size*5, k*tile_size*5, 5*(c+1)*tile_size, 5*(k+1)*tile_size, false); 
+				draw_text((c+1)*(tile_size*3), (k+1)*(tile_size*3), global.bigGrid[c][k]);
+				draw_rectangle(c*tile_size*5, k*tile_size*5, 5*(c+1)*tile_size, 5*(k+1)*tile_size, true); 
 			}
 		}
 	}
 	//draw_set_alpha(1);
 }
+
+
+	
+
+
 	
 
 	
