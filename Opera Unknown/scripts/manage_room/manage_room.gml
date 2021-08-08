@@ -8,18 +8,19 @@
 
 //sets all insatnces in the room
 function setRoom() {
-	clearRoom();
-	moveAllies();
-	if (last_door == 0) {
+	setWalls();
+	//clearRoom();
+	//moveAllies();
+	/*if (last_door == 0) {
 		setWalls(40,75); //40, 75
 	} else if (last_door == 1) {
 		setWalls(50,100)
 	} else if (last_door == 2) {
 		setWalls(10,40);
-	}
-	placeItems();
-	setEnemies(getCount(), getTypes());
-	roomCount++;
+	}*/
+	//placeItems();
+	//setEnemies(getCount(), getTypes());
+	//roomCount++;
 }
 
 //moves allies to top left
@@ -163,7 +164,7 @@ function setEnemies(count, types) {
 }
 
 //finds number of walls and draws them randomly in room
-function setWalls(int1 , int2) {
+/*function setWalls(int1 , int2) {
 	for (var i = 0; i < irandom_range(int1, int2+1); i++) {
 		do {
 		var wallX = irandom_range(2, 18);
@@ -171,7 +172,7 @@ function setWalls(int1 , int2) {
 		} until position_empty(wallX*tile_size, wallY*tile_size);
 			instance_create_layer(wallX*tile_size,wallY*tile_size,"walls", oWall);
 	}
-}
+}*/
 
 //clears all current walls and enemies
 function clearRoom() {

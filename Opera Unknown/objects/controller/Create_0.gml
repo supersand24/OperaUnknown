@@ -92,7 +92,7 @@ p2_menu = menuState.movement;
 menu_option = 0;
 menu_target = 0;
 
-//setRoom();
+setRoom();
 
 global.ctIndexes = false
 
@@ -157,3 +157,26 @@ global.ctBlob[ 247 ] = [ 5 , 1 ];
 global.ctBlob[ 223 ] = [ 6 , 1 ];
 
 global.ctBlob[ 255 ] = [ 1 , 1 ];
+
+
+//BigGrid
+
+global.bigGrid[0,0] = -1;
+global.bigGrid[1,0] = -1;
+global.bigGrid[2,0] = -1;
+global.bigGrid[3,0] = -1;
+
+global.bigGrid[0,1] = -1;
+global.bigGrid[1,1] = -1;
+global.bigGrid[2,1] = -1;
+global.bigGrid[3,1] = -1;
+
+global.bigGrid[0,2] = -1;
+global.bigGrid[1,2] = -1;
+global.bigGrid[2,2] = -1;
+global.bigGrid[3,2] = -1;
+
+global.bigGrid[0,3] = -1;
+global.bigGrid[1,3] = -1;
+global.bigGrid[2,3] = -1;
+global.bigGrid[3,3] = -1;

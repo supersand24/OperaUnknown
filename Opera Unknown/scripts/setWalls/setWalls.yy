@@ -6,7 +6,7 @@
     "path": "folders/Scripts/room generation.yy",
   },
   "resourceVersion": "1.0",
-  "name": "manage_room",
+  "name": "setWalls",
   "tags": [],
   "resourceType": "GMScript",
 }
