@@ -8,7 +8,7 @@
 
 //sets all insatnces in the room
 function setRoom() {
-	setWalls();
+	//setWalls();
 	//clearRoom();
 	//moveAllies();
 	/*if (last_door == 0) {

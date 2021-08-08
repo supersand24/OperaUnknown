@@ -3,7 +3,7 @@
 function setWalls() {
 	for (var i = 0; i < 4; i++) {
 		for (var j = 0; j < 4; j++) {
-			global.bigGrid[i][j] = -1;
+			global.bigGrid[i][j] = 0;
 		}
 	}
 	
@@ -52,13 +52,17 @@ function makeMaze(start, counter) {
 	}*/
 	
 	global.bigGrid[start[0]][start[1]] = counter;
-	
+	show_debug_message("counter = " + string(counter));
 	var cur = start;
 	var empty = undefined;
 	//show_debug_message(cur[0]);
 	//show_debug_message(cur[1]);
 	
-	if (((cur[0] == 0 || cur[0] == 1 || cur[0] == 2 || cur[0] == 3) && (cur[1] == 0 || cur[1] == 3)) || ((cur[1] == 0 || cur[1] == 1 || cur[1] == 2 || cur[1] == 3) && (cur[0] == 0 || cur[0] == 3)) && counter != 1) {
+	if (counter == 16) {
+		return;
+	}
+	
+	if (((cur[0] == 0 || cur[0] == 1 || cur[0] == 2 || cur[0] == 3) && (cur[1] == 0 || cur[1] == 3)) || ((cur[1] == 0 || cur[1] == 1 || cur[1] == 2 || cur[1] == 3) && (cur[0] == 0 || cur[0] == 3)) && counter > 3) {
 		var choice = irandom(3);
 		if choice == 0 {
 			return;
@@ -70,46 +74,47 @@ function makeMaze(start, counter) {
 			for (var i = 0; i < 4; i++) {
 				//up
 				if (cur[1]-1 > -1) {
-					if (global.bigGrid[cur[0]][cur[1]-1] == -1) {
+					if (global.bigGrid[cur[0]][cur[1]-1] == 0) {
 					empty[i] = 1;
 					}
 				}
 				//down
 				if (cur[1]+1 < 4) {
-					if (global.bigGrid[cur[0]][cur[1]+1] == -1) {
+					if (global.bigGrid[cur[0]][cur[1]+1] == 0) {
 					empty[i] = 2;
 					}
 				}
 				//left
 				if (cur[0]-1 > -1) {
-					if (global.bigGrid[cur[0]-1][cur[1]] == -1) {
+					if (global.bigGrid[cur[0]-1][cur[1]] == 0) {
 					empty[i] = 3;
 					}
 				}
 				//right	
 				if (cur[0]+1 < 4) {
-					if (global.bigGrid[cur[0]+1][cur[1]] == -1) {
+					if (global.bigGrid[cur[0]+1][cur[1]] == 0) {
 					empty[i] = 4;
 					}
 				}
 			}	
 	
 			if (empty != undefined) {
-				var dir = irandom(array_length(empty)-1);
+				var dir = irandom(array_length(empty) == 0);
+				//show_debug_message("dir = " + string(dir));
 				if empty[dir] == 1 {
-					global.bigGrid[cur[0]][cur[1]-1] = counter;
+					//global.bigGrid[cur[0]][cur[1]-1] = counter;
 					//counter++;
 					cur = [cur[0], cur[1]-1];
 				} else if empty[dir] == 2 {
-					global.bigGrid[cur[0]][cur[1]+1] = counter;
+					//global.bigGrid[cur[0]][cur[1]+1] = counter;
 					//counter++;
 					cur = [cur[0], cur[1]+1];
 				} else if empty[dir] == 3 {
-					global.bigGrid[start[0]-1][start[1]] = counter;
+					//global.bigGrid[start[0]-1][start[1]] = counter;
 					//counter++;
 					cur = [cur[0]-1, cur[1]];
 				} else if empty[dir] == 4 {
-					global.bigGrid[cur[0]+1][cur[1]] = counter;
+					//global.bigGrid[cur[0]+1][cur[1]] = counter;
 					//counter++;
 					cur = [cur[0]+1, cur[1]];
 				}
@@ -123,25 +128,25 @@ function makeMaze(start, counter) {
 			for (var i = 0; i < 4; i++) {
 				//up
 				if (cur[1]-1 > -1) {
-					if (global.bigGrid[cur[0]][cur[1]-1] == -1) {
+					if (global.bigGrid[cur[0]][cur[1]-1] == 0) {
 					empty[i] = 1;
 					}
 				}
 				//down
 				if (cur[1]+1 < 4) {
-					if (global.bigGrid[cur[0]][cur[1]+1] == -1) {
+					if (global.bigGrid[cur[0]][cur[1]+1] == 0) {
 					empty[i] = 2;
 					}
 				}
 				//left
 				if (cur[0]-1 > -1) {
-					if (global.bigGrid[cur[0]-1][cur[1]] == -1) {
+					if (global.bigGrid[cur[0]-1][cur[1]] == 0) {
 					empty[i] = 3;
 					}
 				}
 				//right	
 				if (cur[0]+1 < 4) {
-					if (global.bigGrid[cur[0]+1][cur[1]] == -1) {
+					if (global.bigGrid[cur[0]+1][cur[1]] == 0) {
 					empty[i] = 4;
 					}
 				}
@@ -149,6 +154,7 @@ function makeMaze(start, counter) {
 	
 			if (empty != undefined) {
 				var dir = irandom(array_length(empty)-1);
+				//show_debug_message("dir = " + string(dir));
 				if empty[dir] == 1 {
 					global.bigGrid[cur[0]][cur[1]-1] = counter;
 					//counter++;
@@ -174,15 +180,22 @@ function makeMaze(start, counter) {
 
 
 function drawWalls() {
-	draw_set_alpha(3);
+	draw_set_alpha(1);
+	draw_set_color(c_blue);
+	draw_set_valign(fa_middle);
+	draw_set_halign(fa_center);
+	//draw_rectangle(0, 0, 5*tile_size, 5*tile_size, true); 
+	//draw_rectangle(3*tile_size*5, 5*0*tile_size, 5*tile_size*4, 5*tile_size*1, true); 
 	for (var c = 0; c < 4; c++) {
 		for (var k = 0; k < 4; k++) {
-			if global.bigGrid[c][k] != -1 {
-				draw_rectangle(1*c*30, 1*k*30,5*(c+1)*30, 5*(k+1)*30, false); 
+			if global.bigGrid[c][k] != 0 {
+				show_debug_message("c is " + string(c) + " and k is " + string(k));
+				draw_text((c+1)*tile_size*3, (k+1)*tile_size*3, global.bigGrid[c][k]);
+				draw_rectangle(c*tile_size*5, k*tile_size*5, 5*(c+1)*tile_size, 5*(k+1)*tile_size, false); 
 			}
 		}
 	}
-	draw_set_alpha(1);
+	//draw_set_alpha(1);
 }
 	
 
